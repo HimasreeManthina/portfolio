@@ -15,11 +15,10 @@ scroll-behavior:smooth;
 }
 
 body{
-font-family:Arial, Helvetica, sans-serif;
+font-family:Arial;
 margin:0;
 background:#0f172a;
 color:white;
-line-height:1.6;
 }
 
 nav{
@@ -53,13 +52,6 @@ border-radius:50%;
 border:4px solid #38bdf8;
 }
 
-.subtitle{
-color:#38bdf8;
-font-size:20px;
-font-weight:bold;
-margin-top:10px;
-}
-
 .typing{
 color:#38bdf8;
 font-weight:bold;
@@ -68,7 +60,7 @@ font-size:22px;
 
 section{
 padding:70px 20px;
-max-width:1000px;
+max-width:1100px;
 margin:auto;
 text-align:center;
 }
@@ -79,12 +71,6 @@ background:#1e293b;
 padding:10px 16px;
 margin:8px;
 border-radius:8px;
-font-size:14px;
-}
-
-.tech-icons img{
-width:45px;
-margin:10px;
 }
 
 .timeline{
@@ -99,20 +85,31 @@ margin-bottom:30px;
 
 .projects-grid{
 display:grid;
-grid-template-columns:repeat(auto-fit,minmax(280px,1fr));
-gap:25px;
-margin-top:30px;
+grid-template-columns:repeat(auto-fit,minmax(320px,1fr));
+gap:30px;
+margin-top:40px;
 }
 
 .project-card{
 background:#1e293b;
-padding:25px;
 border-radius:12px;
+overflow:hidden;
 transition:0.3s;
 }
 
 .project-card:hover{
 transform:translateY(-6px);
+}
+
+.project-card img{
+width:100%;
+height:200px;
+object-fit:cover;
+}
+
+.project-content{
+padding:20px;
+text-align:left;
 }
 
 .tech-tag{
@@ -131,7 +128,7 @@ padding:10px 18px;
 border-radius:6px;
 cursor:pointer;
 font-size:13px;
-margin:8px;
+margin:8px 5px;
 }
 
 button:hover{
@@ -190,11 +187,6 @@ Full Stack Developer experienced in building scalable cloud-native
 applications using Java, Spring Boot, React and AWS.
 </p>
 
-<p>
-Specialized in microservices architecture, REST APIs,
-containerized deployments using Docker and Kubernetes.
-</p>
-
 </section>
 
 <section id="skills">
@@ -206,27 +198,10 @@ containerized deployments using Docker and Kubernetes.
 <span>Java</span>
 <span>Spring Boot</span>
 <span>React</span>
-<span>Angular</span>
-<span>JavaScript</span>
-<span>TypeScript</span>
-<span>Python</span>
 <span>AWS</span>
 <span>Docker</span>
 <span>Kubernetes</span>
-<span>MySQL</span>
 <span>MongoDB</span>
-
-</div>
-
-<h3>Tech Stack</h3>
-
-<div class="tech-icons">
-
-<img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/java/java-original.svg">
-<img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/react/react-original.svg">
-<img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/spring/spring-original.svg">
-<img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/docker/docker-original.svg">
-<img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/kubernetes/kubernetes-plain.svg">
 
 </div>
 
@@ -239,20 +214,15 @@ containerized deployments using Docker and Kubernetes.
 <div class="timeline">
 
 <div class="timeline-item">
+
 <h3>Full Stack Developer</h3>
 <p><strong>Find Me – New York</strong></p>
-<p>
-Developed scalable backend services using Java 17 and Spring Boot.
-Built microservices deployed with Docker and Kubernetes.
-</p>
-</div>
 
-<div class="timeline-item">
-<h3>Backend Developer</h3>
 <p>
-Developed enterprise APIs using Spring Boot and optimized
-database performance using MySQL and MongoDB.
+Developed scalable backend services using Java and Spring Boot.
+Built microservices deployed using Docker and Kubernetes.
 </p>
+
 </div>
 
 </div>
@@ -266,13 +236,25 @@ database performance using MySQL and MongoDB.
 <div class="projects-grid">
 
 <div class="project-card">
-<h3>Microservices Platform</h3>
-<p>Cloud-native backend platform built using Java and Spring Boot.</p>
+
+<img src="project1.png">
+
+<div class="project-content">
+
+<h3>Spring Boot Microservices Platform</h3>
+
+<p>
+Designed a scalable microservices architecture using Spring Boot,
+API Gateway, and Kubernetes for container orchestration.
+</p>
 
 <div>
+
 <span class="tech-tag">Java</span>
 <span class="tech-tag">Spring Boot</span>
+<span class="tech-tag">Kubernetes</span>
 <span class="tech-tag">Docker</span>
+
 </div>
 
 <a href="https://github.com/HimasreeManthina" target="_blank">
@@ -281,35 +263,63 @@ database performance using MySQL and MongoDB.
 
 </div>
 
+</div>
+
 <div class="project-card">
-<h3>Full Stack Web Application</h3>
-<p>Enterprise web platform using React frontend and Spring Boot APIs.</p>
+
+<img src="project2.png">
+
+<div class="project-content">
+
+<h3>React + Spring Boot Enterprise App</h3>
+
+<p>
+Full stack application built with React frontend and
+Spring Boot backend APIs connected to MySQL database.
+</p>
 
 <div>
+
 <span class="tech-tag">React</span>
 <span class="tech-tag">Spring Boot</span>
 <span class="tech-tag">MySQL</span>
+
 </div>
 
 <a href="https://github.com/HimasreeManthina" target="_blank">
 <button>GitHub</button>
 </a>
+
+</div>
 
 </div>
 
 <div class="project-card">
-<h3>AWS Serverless API</h3>
-<p>Serverless APIs built using AWS Lambda and API Gateway.</p>
+
+<img src="project3.png">
+
+<div class="project-content">
+
+<h3>AWS Serverless Event Processing API</h3>
+
+<p>
+Serverless architecture using API Gateway, Lambda,
+and Step Functions for event-driven workflows.
+</p>
 
 <div>
+
 <span class="tech-tag">AWS</span>
 <span class="tech-tag">Lambda</span>
 <span class="tech-tag">API Gateway</span>
+
 </div>
 
 <a href="https://github.com/HimasreeManthina" target="_blank">
 <button>GitHub</button>
 </a>
+
+</div>
 
 </div>
 
@@ -359,36 +369,34 @@ let j = 0;
 let currentRole = "";
 let isDeleting = false;
 
-function type() {
+function type(){
 
 const element = document.getElementById("typing");
 
-if (i < roles.length) {
+if(i < roles.length){
 
-if (!isDeleting && j <= roles[i].length) {
-
+if(!isDeleting && j <= roles[i].length){
 currentRole = roles[i].substring(0,j++);
 element.textContent = currentRole;
 }
 
-if (isDeleting && j >= 0) {
-
+if(isDeleting && j >= 0){
 currentRole = roles[i].substring(0,j--);
 element.textContent = currentRole;
 }
 
-if (j == roles[i].length) {
+if(j == roles[i].length){
 isDeleting = true;
 }
 
-if (isDeleting && j == 0) {
+if(isDeleting && j == 0){
 i++;
 isDeleting = false;
 }
 
 }
 
-if (i == roles.length) {
+if(i == roles.length){
 i = 0;
 }
 
