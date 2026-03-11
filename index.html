@@ -2,6 +2,7 @@
 <html lang="en">
 
 <head>
+
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 
@@ -14,9 +15,11 @@ html{scroll-behavior:smooth;}
 body{
 font-family:Arial;
 margin:0;
-background:#0f172a;
+background:linear-gradient(180deg,#020617,#0f172a);
 color:white;
 }
+
+/* NAVBAR */
 
 nav{
 background:#020617;
@@ -24,6 +27,7 @@ padding:18px;
 text-align:center;
 position:sticky;
 top:0;
+backdrop-filter:blur(10px);
 }
 
 nav a{
@@ -31,11 +35,15 @@ color:white;
 margin:20px;
 text-decoration:none;
 font-weight:bold;
+transition:0.3s;
 }
 
 nav a:hover{
 color:#38bdf8;
+transform:scale(1.1);
 }
+
+/* HEADER */
 
 header{
 text-align:center;
@@ -54,12 +62,16 @@ font-weight:bold;
 font-size:22px;
 }
 
+/* SECTIONS */
+
 section{
-padding:70px 20px;
+padding:80px 20px;
 max-width:1100px;
 margin:auto;
 text-align:center;
 }
+
+/* SKILLS */
 
 .skills span{
 display:inline-block;
@@ -67,7 +79,15 @@ background:#1e293b;
 padding:10px 16px;
 margin:8px;
 border-radius:8px;
+transition:0.3s;
 }
+
+.skills span:hover{
+background:#38bdf8;
+color:black;
+}
+
+/* TECH ICONS */
 
 .tech-icons img{
 width:60px;
@@ -79,6 +99,8 @@ transition:0.3s;
 transform:scale(1.2);
 }
 
+/* EXPERIENCE */
+
 .timeline{
 border-left:3px solid #38bdf8;
 padding-left:20px;
@@ -89,6 +111,8 @@ text-align:left;
 margin-bottom:30px;
 }
 
+/* PROJECT GRID */
+
 .projects-grid{
 display:grid;
 grid-template-columns:repeat(auto-fit,minmax(320px,1fr));
@@ -96,10 +120,24 @@ gap:30px;
 margin-top:40px;
 }
 
+/* PROJECT CARD */
+
 .project-card{
-background:#1e293b;
+
+background:rgba(255,255,255,0.05);
 border-radius:12px;
 overflow:hidden;
+backdrop-filter:blur(10px);
+border:1px solid rgba(255,255,255,0.1);
+transition:0.4s;
+
+}
+
+.project-card:hover{
+
+transform:translateY(-10px);
+box-shadow:0 10px 30px rgba(0,0,0,0.6);
+
 }
 
 .project-card img{
@@ -117,14 +155,7 @@ text-align:left;
 margin:8px 0;
 }
 
-.tech-tag{
-display:inline-block;
-background:#0f172a;
-padding:6px 10px;
-margin:5px;
-border-radius:6px;
-font-size:12px;
-}
+/* BUTTON */
 
 button{
 background:#38bdf8;
@@ -133,7 +164,14 @@ padding:10px 18px;
 border-radius:6px;
 cursor:pointer;
 font-size:13px;
+transition:0.3s;
 }
+
+button:hover{
+background:#0ea5e9;
+}
+
+/* FOOTER */
 
 footer{
 background:#020617;
@@ -143,18 +181,25 @@ margin-top:50px;
 }
 
 </style>
+
 </head>
 
 <body>
 
+<!-- NAV -->
+
 <nav>
+
 <a href="#">Home</a>
 <a href="#about">About</a>
 <a href="#skills">Skills</a>
 <a href="#experience">Experience</a>
 <a href="#projects">Projects</a>
 <a href="#contact">Contact</a>
+
 </nav>
+
+<!-- HERO -->
 
 <header>
 
@@ -165,7 +210,8 @@ margin-top:50px;
 <p class="typing" id="typing"></p>
 
 <p>
-5+ years experience building scalable enterprise applications using Java, Spring Boot, React and AWS.
+5+ years experience building scalable enterprise applications using
+Java, Spring Boot, React and AWS.
 </p>
 
 <br>
@@ -176,25 +222,32 @@ margin-top:50px;
 
 </header>
 
+<!-- ABOUT -->
+
 <section id="about">
 
 <h2>About Me</h2>
 
 <p>
-Full Stack Developer experienced in building scalable cloud-native applications using Java, Spring Boot, React and AWS.
+Full Stack Developer experienced in building scalable cloud-native
+applications using Java, Spring Boot, React and AWS.
 </p>
 
 <p>
-Specialized in REST APIs, microservices architecture and cloud deployments using Docker and Kubernetes.
+Specialized in REST APIs, microservices architecture,
+and cloud deployments using Docker and Kubernetes.
 </p>
 
 </section>
+
+<!-- SKILLS -->
 
 <section id="skills">
 
 <h2>Technical Skills</h2>
 
 <div class="skills">
+
 <span>Java</span>
 <span>Spring Boot</span>
 <span>React</span>
@@ -203,6 +256,7 @@ Specialized in REST APIs, microservices architecture and cloud deployments using
 <span>Kubernetes</span>
 <span>MySQL</span>
 <span>MongoDB</span>
+
 </div>
 
 <div class="tech-icons">
@@ -219,6 +273,8 @@ Specialized in REST APIs, microservices architecture and cloud deployments using
 </div>
 
 </section>
+
+<!-- EXPERIENCE -->
 
 <section id="experience">
 
@@ -242,11 +298,15 @@ Specialized in REST APIs, microservices architecture and cloud deployments using
 
 </section>
 
+<!-- PROJECTS -->
+
 <section id="projects">
 
 <h2>Projects</h2>
 
 <div class="projects-grid">
+
+<!-- PROJECT 1 -->
 
 <div class="project-card">
 
@@ -265,6 +325,8 @@ Specialized in REST APIs, microservices architecture and cloud deployments using
 
 </div>
 
+<!-- PROJECT 2 -->
+
 <div class="project-card">
 
 <img src="project2.png">
@@ -281,6 +343,8 @@ Specialized in REST APIs, microservices architecture and cloud deployments using
 </div>
 
 </div>
+
+<!-- PROJECT 3 -->
 
 <div class="project-card">
 
@@ -302,6 +366,8 @@ Specialized in REST APIs, microservices architecture and cloud deployments using
 </div>
 
 </section>
+
+<!-- CONTACT -->
 
 <section id="contact">
 
