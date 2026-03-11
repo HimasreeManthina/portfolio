@@ -43,7 +43,8 @@ color:#38bdf8;
 
 header{
 text-align:center;
-padding:80px 20px;
+padding:100px 20px;
+background:linear-gradient(180deg,#020617,#0f172a);
 }
 
 .profile-img{
@@ -54,7 +55,15 @@ border:4px solid #38bdf8;
 
 .subtitle{
 color:#38bdf8;
+font-size:20px;
 font-weight:bold;
+margin-top:10px;
+}
+
+.typing{
+color:#38bdf8;
+font-weight:bold;
+font-size:22px;
 }
 
 section{
@@ -86,10 +95,6 @@ text-align:left;
 
 .timeline-item{
 margin-bottom:30px;
-}
-
-.timeline-item h3{
-color:#38bdf8;
 }
 
 .projects-grid{
@@ -163,9 +168,7 @@ margin-top:50px;
 
 <h1>Hi, I'm Himasree 👋</h1>
 
-<p class="subtitle">
-Java Full Stack Developer | Cloud & Microservices Engineer
-</p>
+<p class="typing" id="typing"></p>
 
 <p>
 5+ years experience building scalable enterprise applications
@@ -236,26 +239,20 @@ containerized deployments using Docker and Kubernetes.
 <div class="timeline">
 
 <div class="timeline-item">
-
 <h3>Full Stack Developer</h3>
 <p><strong>Find Me – New York</strong></p>
-
 <p>
 Developed scalable backend services using Java 17 and Spring Boot.
 Built microservices deployed with Docker and Kubernetes.
 </p>
-
 </div>
 
 <div class="timeline-item">
-
 <h3>Backend Developer</h3>
-
 <p>
 Developed enterprise APIs using Spring Boot and optimized
 database performance using MySQL and MongoDB.
 </p>
-
 </div>
 
 </div>
@@ -269,20 +266,13 @@ database performance using MySQL and MongoDB.
 <div class="projects-grid">
 
 <div class="project-card">
-
 <h3>Microservices Platform</h3>
-
-<p>
-Cloud-native backend platform built using Java, Spring Boot
-and Kubernetes.
-</p>
+<p>Cloud-native backend platform built using Java and Spring Boot.</p>
 
 <div>
-
 <span class="tech-tag">Java</span>
 <span class="tech-tag">Spring Boot</span>
 <span class="tech-tag">Docker</span>
-
 </div>
 
 <a href="https://github.com/HimasreeManthina" target="_blank">
@@ -292,20 +282,13 @@ and Kubernetes.
 </div>
 
 <div class="project-card">
-
 <h3>Full Stack Web Application</h3>
-
-<p>
-Enterprise web platform built using React frontend
-and Spring Boot backend APIs.
-</p>
+<p>Enterprise web platform using React frontend and Spring Boot APIs.</p>
 
 <div>
-
 <span class="tech-tag">React</span>
 <span class="tech-tag">Spring Boot</span>
 <span class="tech-tag">MySQL</span>
-
 </div>
 
 <a href="https://github.com/HimasreeManthina" target="_blank">
@@ -315,20 +298,13 @@ and Spring Boot backend APIs.
 </div>
 
 <div class="project-card">
-
 <h3>AWS Serverless API</h3>
-
-<p>
-Serverless REST APIs built using AWS Lambda,
-API Gateway and DynamoDB.
-</p>
+<p>Serverless APIs built using AWS Lambda and API Gateway.</p>
 
 <div>
-
 <span class="tech-tag">AWS</span>
 <span class="tech-tag">Lambda</span>
 <span class="tech-tag">API Gateway</span>
-
 </div>
 
 <a href="https://github.com/HimasreeManthina" target="_blank">
@@ -368,6 +344,61 @@ View LinkedIn Profile
 <p>© 2026 Himasree | Full Stack Developer</p>
 
 </footer>
+
+<script>
+
+const roles = [
+"Java Full Stack Developer",
+"Spring Boot Developer",
+"Cloud Engineer",
+"React Developer"
+];
+
+let i = 0;
+let j = 0;
+let currentRole = "";
+let isDeleting = false;
+
+function type() {
+
+const element = document.getElementById("typing");
+
+if (i < roles.length) {
+
+if (!isDeleting && j <= roles[i].length) {
+
+currentRole = roles[i].substring(0,j++);
+element.textContent = currentRole;
+}
+
+if (isDeleting && j >= 0) {
+
+currentRole = roles[i].substring(0,j--);
+element.textContent = currentRole;
+}
+
+if (j == roles[i].length) {
+isDeleting = true;
+}
+
+if (isDeleting && j == 0) {
+i++;
+isDeleting = false;
+}
+
+}
+
+if (i == roles.length) {
+i = 0;
+}
+
+setTimeout(type,100);
+
+}
+
+type();
+
+</script>
 
 </body>
 </html>
