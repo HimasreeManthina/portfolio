@@ -2,7 +2,6 @@
 <html lang="en">
 
 <head>
-
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 
@@ -25,7 +24,6 @@ padding:18px;
 text-align:center;
 position:sticky;
 top:0;
-z-index:10;
 }
 
 nav a{
@@ -35,12 +33,13 @@ text-decoration:none;
 font-weight:bold;
 }
 
-nav a:hover{color:#38bdf8;}
+nav a:hover{
+color:#38bdf8;
+}
 
 header{
 text-align:center;
 padding:100px 20px;
-background:linear-gradient(180deg,#020617,#0f172a);
 }
 
 .profile-img{
@@ -70,10 +69,6 @@ margin:8px;
 border-radius:8px;
 }
 
-.tech-icons{
-margin-top:40px;
-}
-
 .tech-icons img{
 width:60px;
 margin:20px;
@@ -90,7 +85,9 @@ padding-left:20px;
 text-align:left;
 }
 
-.timeline-item{margin-bottom:30px;}
+.timeline-item{
+margin-bottom:30px;
+}
 
 .projects-grid{
 display:grid;
@@ -103,10 +100,7 @@ margin-top:40px;
 background:#1e293b;
 border-radius:12px;
 overflow:hidden;
-transition:0.3s;
 }
-
-.project-card:hover{transform:translateY(-6px);}
 
 .project-card img{
 width:100%;
@@ -117,6 +111,10 @@ object-fit:cover;
 .project-content{
 padding:20px;
 text-align:left;
+}
+
+.list-line{
+margin:8px 0;
 }
 
 .tech-tag{
@@ -135,10 +133,7 @@ padding:10px 18px;
 border-radius:6px;
 cursor:pointer;
 font-size:13px;
-margin:8px 5px;
 }
-
-button:hover{background:#0ea5e9;}
 
 footer{
 background:#020617;
@@ -147,39 +142,7 @@ text-align:center;
 margin-top:50px;
 }
 
-.social-icons{
-position:fixed;
-right:20px;
-bottom:40px;
-display:flex;
-flex-direction:column;
-gap:10px;
-}
-
-.social-icons a{
-background:#38bdf8;
-color:white;
-padding:12px;
-border-radius:50%;
-text-decoration:none;
-font-weight:bold;
-}
-
-.fade{
-opacity:0;
-transform:translateY(20px);
-transition:0.6s;
-}
-
-.fade.show{
-opacity:1;
-transform:translateY(0);
-}
-
-.list-line{margin:8px 0;}
-
 </style>
-
 </head>
 
 <body>
@@ -202,9 +165,10 @@ transform:translateY(0);
 <p class="typing" id="typing"></p>
 
 <p>
-5+ years experience building scalable enterprise applications using
-Java, Spring Boot, React and AWS.
+5+ years experience building scalable enterprise applications using Java, Spring Boot, React and AWS.
 </p>
+
+<br>
 
 <a href="Himasree_Full Stack_ Resume.pdf" target="_blank">
 <button>Download Resume</button>
@@ -212,7 +176,21 @@ Java, Spring Boot, React and AWS.
 
 </header>
 
-<section id="skills" class="fade">
+<section id="about">
+
+<h2>About Me</h2>
+
+<p>
+Full Stack Developer experienced in building scalable cloud-native applications using Java, Spring Boot, React and AWS.
+</p>
+
+<p>
+Specialized in REST APIs, microservices architecture and cloud deployments using Docker and Kubernetes.
+</p>
+
+</section>
+
+<section id="skills">
 
 <h2>Technical Skills</h2>
 
@@ -241,3 +219,163 @@ Java, Spring Boot, React and AWS.
 </div>
 
 </section>
+
+<section id="experience">
+
+<h2>Professional Experience</h2>
+
+<div class="timeline">
+
+<div class="timeline-item">
+
+<h3>Full Stack Developer</h3>
+<p><strong>Find Me – New York</strong></p>
+
+<div class="list-line">- Developed scalable backend services using Java and Spring Boot</div>
+<div class="list-line">- Designed REST APIs and microservices architecture</div>
+<div class="list-line">- Containerized applications using Docker</div>
+<div class="list-line">- Deployed applications using Kubernetes</div>
+
+</div>
+
+</div>
+
+</section>
+
+<section id="projects">
+
+<h2>Projects</h2>
+
+<div class="projects-grid">
+
+<div class="project-card">
+
+<img src="project1.png">
+
+<div class="project-content">
+
+<h3>Spring Boot Microservices Platform</h3>
+
+<div class="list-line">- Designed API Gateway for routing</div>
+<div class="list-line">- Built Spring Boot microservices</div>
+<div class="list-line">- Containerized services using Docker</div>
+<div class="list-line">- Deployed using Kubernetes</div>
+
+</div>
+
+</div>
+
+<div class="project-card">
+
+<img src="project2.png">
+
+<div class="project-content">
+
+<h3>React + Spring Boot Enterprise App</h3>
+
+<div class="list-line">- Built React frontend</div>
+<div class="list-line">- Developed Spring Boot APIs</div>
+<div class="list-line">- Integrated MySQL database</div>
+<div class="list-line">- Implemented authentication</div>
+
+</div>
+
+</div>
+
+<div class="project-card">
+
+<img src="project3.png">
+
+<div class="project-content">
+
+<h3>AWS Serverless Event Processing API</h3>
+
+<div class="list-line">- Designed serverless architecture</div>
+<div class="list-line">- Implemented Lambda functions</div>
+<div class="list-line">- Used API Gateway</div>
+<div class="list-line">- Integrated Step Functions</div>
+
+</div>
+
+</div>
+
+</div>
+
+</section>
+
+<section id="contact">
+
+<h2>Contact</h2>
+
+<p>Email: manthimasree@gmail.com</p>
+
+<p>
+GitHub:
+<a href="https://github.com/HimasreeManthina" style="color:#38bdf8;">
+github.com/HimasreeManthina
+</a>
+</p>
+
+<p>
+LinkedIn:
+<a href="https://www.linkedin.com/in/msree1412/" style="color:#38bdf8;">
+linkedin.com/in/msree1412
+</a>
+</p>
+
+</section>
+
+<footer>
+
+<p>© 2026 Himasree | Full Stack Developer</p>
+
+</footer>
+
+<script>
+
+const roles=[
+"Java Full Stack Developer",
+"Spring Boot Developer",
+"Cloud Engineer",
+"React Developer"
+];
+
+let i=0;
+let j=0;
+let current="";
+let deleting=false;
+
+function type(){
+
+const element=document.getElementById("typing");
+
+if(i<roles.length){
+
+if(!deleting && j<=roles[i].length){
+current=roles[i].substring(0,j++);
+element.textContent=current;
+}
+
+if(deleting && j>=0){
+current=roles[i].substring(0,j--);
+element.textContent=current;
+}
+
+if(j==roles[i].length){deleting=true;}
+
+if(deleting && j==0){i++; deleting=false;}
+
+}
+
+if(i==roles.length){i=0;}
+
+setTimeout(type,100);
+
+}
+
+type();
+
+</script>
+
+</body>
+</html>
