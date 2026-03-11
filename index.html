@@ -10,6 +10,10 @@
 
 <style>
 
+html {
+scroll-behavior: smooth;
+}
+
 body{
 font-family: Arial, Helvetica, sans-serif;
 margin:0;
@@ -39,43 +43,60 @@ color:#38bdf8;
 
 header{
 text-align:center;
-padding:90px 20px;
+padding:80px 20px;
+}
+
+.profile-img{
+width:160px;
+border-radius:50%;
+border:4px solid #38bdf8;
 }
 
 header h1{
-font-size:45px;
+font-size:42px;
 margin-top:15px;
+}
+
+.subtitle{
+color:#38bdf8;
+font-weight:bold;
 }
 
 section{
 padding:70px 20px;
 text-align:center;
+max-width:900px;
+margin:auto;
 }
 
 .skills span{
 display:inline-block;
 background:#1e293b;
-padding:12px 20px;
-margin:10px;
+padding:12px 18px;
+margin:8px;
 border-radius:8px;
 font-size:14px;
+}
+
+.tech-icons img{
+width:45px;
+margin:10px;
 }
 
 .project{
 background:#1e293b;
 padding:25px;
 margin:25px auto;
-width:65%;
 border-radius:10px;
 }
 
 button{
 background:#38bdf8;
 border:none;
-padding:14px 25px;
+padding:12px 22px;
 border-radius:6px;
 cursor:pointer;
-font-size:15px;
+font-size:14px;
 margin-top:15px;
 }
 
@@ -85,14 +106,9 @@ background:#0ea5e9;
 
 footer{
 background:#020617;
-padding:30px;
+padding:25px;
 text-align:center;
 margin-top:50px;
-}
-
-.profile-img{
-border-radius:50%;
-width:150px;
 }
 
 </style>
@@ -106,7 +122,6 @@ width:150px;
 <a href="#">Home</a>
 <a href="#about">About</a>
 <a href="#skills">Skills</a>
-<a href="#experience">Experience</a>
 <a href="#projects">Projects</a>
 <a href="#contact">Contact</a>
 
@@ -118,7 +133,9 @@ width:150px;
 
 <h1>Hi, I'm Himasree 👋</h1>
 
-<h3>Java Full Stack Developer | Cloud & Microservices Engineer</h3>
+<p class="subtitle">
+Java Full Stack Developer | Cloud & Microservices Engineer
+</p>
 
 <p>
 5+ years experience building scalable enterprise applications
@@ -137,13 +154,12 @@ using Java, Spring Boot, React and AWS.
 
 <p>
 Full Stack Developer experienced in building scalable cloud-native
-applications using Java 11–17, Spring Boot, React and AWS.
+applications using Java, Spring Boot, React and AWS.
 </p>
 
 <p>
-Specialized in microservices architecture, REST APIs,
-containerized deployments using Docker and Kubernetes,
-and CI/CD automation.
+Strong experience designing REST APIs, building microservices,
+and deploying applications using Docker, Kubernetes and CI/CD pipelines.
 </p>
 
 </section>
@@ -165,36 +181,22 @@ and CI/CD automation.
 <span>Docker</span>
 <span>Kubernetes</span>
 <span>MySQL</span>
-<span>PostgreSQL</span>
 <span>MongoDB</span>
-<span>CI/CD</span>
 
 </div>
 
-</section>
+<h3>Tech Stack</h3>
 
-<section id="experience">
+<div class="tech-icons">
 
-<h2>Professional Experience</h2>
+<img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/java/java-original.svg">
+<img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/react/react-original.svg">
+<img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/spring/spring-original.svg">
+<img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/docker/docker-original.svg">
+<img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/kubernetes/kubernetes-plain.svg">
+<img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/javascript/javascript-original.svg">
 
-<p><strong>Full Stack Developer – Find Me (New York, USA)</strong></p>
-
-<p>
-Designed and implemented scalable backend microservices
-using Java 17 and Spring Boot improving application
-performance and reliability.
-</p>
-
-<p>
-Built containerized applications using Docker and
-orchestrated deployments with Kubernetes to
-improve scalability.
-</p>
-
-<p>
-Developed cloud-native APIs using AWS services
-including Lambda, API Gateway and S3.
-</p>
+</div>
 
 </section>
 
@@ -207,7 +209,7 @@ including Lambda, API Gateway and S3.
 <h3>Cloud Native Microservices Platform</h3>
 
 <p>
-Built scalable microservices architecture using
+Developed scalable microservices architecture using
 Java, Spring Boot, Docker and Kubernetes.
 </p>
 
@@ -222,7 +224,7 @@ Java, Spring Boot, Docker and Kubernetes.
 <h3>Full Stack Enterprise Web Application</h3>
 
 <p>
-Developed a complete web platform using
+Built a modern full stack web platform using
 React frontend and Spring Boot backend APIs.
 </p>
 
@@ -262,8 +264,6 @@ API Gateway and DynamoDB.
 <h2>Contact</h2>
 
 <p>Email: manthimasree@gmail.com</p>
-
-<p>Phone: 314-575-9855</p>
 
 <p>
 GitHub:
