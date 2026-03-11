@@ -27,6 +27,7 @@ padding:18px;
 text-align:center;
 position:sticky;
 top:0;
+z-index:10;
 }
 
 nav a{
@@ -142,6 +143,35 @@ text-align:center;
 margin-top:50px;
 }
 
+.social-icons{
+position:fixed;
+right:20px;
+bottom:40px;
+display:flex;
+flex-direction:column;
+gap:10px;
+}
+
+.social-icons a{
+background:#38bdf8;
+color:white;
+padding:12px;
+border-radius:50%;
+text-decoration:none;
+font-weight:bold;
+}
+
+.fade{
+opacity:0;
+transform:translateY(20px);
+transition:0.6s;
+}
+
+.fade.show{
+opacity:1;
+transform:translateY(0);
+}
+
 </style>
 
 </head>
@@ -168,8 +198,8 @@ margin-top:50px;
 <p class="typing" id="typing"></p>
 
 <p>
-5+ years experience building scalable enterprise applications
-using Java, Spring Boot, React and AWS.
+5+ years experience building scalable enterprise applications using
+Java, Spring Boot, React and AWS.
 </p>
 
 <a href="Himasree_Full Stack_ Resume.pdf" target="_blank">
@@ -178,7 +208,7 @@ using Java, Spring Boot, React and AWS.
 
 </header>
 
-<section id="about">
+<section id="about" class="fade">
 
 <h2>About Me</h2>
 
@@ -187,9 +217,14 @@ Full Stack Developer experienced in building scalable cloud-native
 applications using Java, Spring Boot, React and AWS.
 </p>
 
+<p>
+Strong background in designing REST APIs, microservices architecture,
+and deploying cloud-native applications using Docker and Kubernetes.
+</p>
+
 </section>
 
-<section id="skills">
+<section id="skills" class="fade">
 
 <h2>Technical Skills</h2>
 
@@ -201,13 +236,14 @@ applications using Java, Spring Boot, React and AWS.
 <span>AWS</span>
 <span>Docker</span>
 <span>Kubernetes</span>
+<span>MySQL</span>
 <span>MongoDB</span>
 
 </div>
 
 </section>
 
-<section id="experience">
+<section id="experience" class="fade">
 
 <h2>Professional Experience</h2>
 
@@ -218,10 +254,17 @@ applications using Java, Spring Boot, React and AWS.
 <h3>Full Stack Developer</h3>
 <p><strong>Find Me – New York</strong></p>
 
-<p>
-Developed scalable backend services using Java and Spring Boot.
-Built microservices deployed using Docker and Kubernetes.
-</p>
+<ul>
+
+<li>Developed scalable backend services using Java and Spring Boot</li>
+
+<li>Built REST APIs and microservices architecture</li>
+
+<li>Containerized applications using Docker</li>
+
+<li>Deployed services using Kubernetes</li>
+
+</ul>
 
 </div>
 
@@ -229,7 +272,7 @@ Built microservices deployed using Docker and Kubernetes.
 
 </section>
 
-<section id="projects">
+<section id="projects" class="fade">
 
 <h2>Projects</h2>
 
@@ -244,16 +287,28 @@ Built microservices deployed using Docker and Kubernetes.
 <h3>Spring Boot Microservices Platform</h3>
 
 <p>
-Designed a scalable microservices architecture using Spring Boot,
-API Gateway, and Kubernetes for container orchestration.
+Scalable microservices architecture using Spring Boot
+and Kubernetes.
 </p>
+
+<ul>
+
+<li>Designed API Gateway for routing requests</li>
+
+<li>Developed multiple Spring Boot services</li>
+
+<li>Containerized services using Docker</li>
+
+<li>Deployed using Kubernetes cluster</li>
+
+</ul>
 
 <div>
 
 <span class="tech-tag">Java</span>
 <span class="tech-tag">Spring Boot</span>
-<span class="tech-tag">Kubernetes</span>
 <span class="tech-tag">Docker</span>
+<span class="tech-tag">Kubernetes</span>
 
 </div>
 
@@ -274,9 +329,20 @@ API Gateway, and Kubernetes for container orchestration.
 <h3>React + Spring Boot Enterprise App</h3>
 
 <p>
-Full stack application built with React frontend and
-Spring Boot backend APIs connected to MySQL database.
+Full stack application with React frontend and Spring Boot APIs.
 </p>
+
+<ul>
+
+<li>Developed responsive UI using React</li>
+
+<li>Built REST APIs using Spring Boot</li>
+
+<li>Integrated MySQL database</li>
+
+<li>Implemented secure authentication</li>
+
+</ul>
 
 <div>
 
@@ -303,9 +369,20 @@ Spring Boot backend APIs connected to MySQL database.
 <h3>AWS Serverless Event Processing API</h3>
 
 <p>
-Serverless architecture using API Gateway, Lambda,
-and Step Functions for event-driven workflows.
+Serverless architecture using AWS Lambda and API Gateway.
 </p>
+
+<ul>
+
+<li>Designed event-driven API architecture</li>
+
+<li>Implemented Lambda functions</li>
+
+<li>Integrated Step Functions workflows</li>
+
+<li>Built scalable cloud API system</li>
+
+</ul>
 
 <div>
 
@@ -327,7 +404,7 @@ and Step Functions for event-driven workflows.
 
 </section>
 
-<section id="contact">
+<section id="contact" class="fade">
 
 <h2>Contact</h2>
 
@@ -342,8 +419,8 @@ github.com/HimasreeManthina
 
 <p>
 LinkedIn:
-<a href="YOUR_LINKEDIN_LINK" style="color:#38bdf8;">
-View LinkedIn Profile
+<a href="https://www.linkedin.com/in/msree1412/" style="color:#38bdf8;">
+linkedin.com/in/msree1412
 </a>
 </p>
 
@@ -355,56 +432,78 @@ View LinkedIn Profile
 
 </footer>
 
+<div class="social-icons">
+
+<a href="https://github.com/HimasreeManthina" target="_blank">
+G
+</a>
+
+<a href="https://www.linkedin.com/in/msree1412/" target="_blank">
+in
+</a>
+
+</div>
+
 <script>
 
-const roles = [
+const roles=[
 "Java Full Stack Developer",
 "Spring Boot Developer",
 "Cloud Engineer",
 "React Developer"
 ];
 
-let i = 0;
-let j = 0;
-let currentRole = "";
-let isDeleting = false;
+let i=0;
+let j=0;
+let current="";
+let deleting=false;
 
 function type(){
 
-const element = document.getElementById("typing");
+const element=document.getElementById("typing");
 
-if(i < roles.length){
+if(i<roles.length){
 
-if(!isDeleting && j <= roles[i].length){
-currentRole = roles[i].substring(0,j++);
-element.textContent = currentRole;
+if(!deleting && j<=roles[i].length){
+current=roles[i].substring(0,j++);
+element.textContent=current;
 }
 
-if(isDeleting && j >= 0){
-currentRole = roles[i].substring(0,j--);
-element.textContent = currentRole;
+if(deleting && j>=0){
+current=roles[i].substring(0,j--);
+element.textContent=current;
 }
 
-if(j == roles[i].length){
-isDeleting = true;
-}
+if(j==roles[i].length){deleting=true;}
 
-if(isDeleting && j == 0){
-i++;
-isDeleting = false;
-}
+if(deleting && j==0){i++; deleting=false;}
 
 }
 
-if(i == roles.length){
-i = 0;
-}
+if(i==roles.length){i=0;}
 
 setTimeout(type,100);
 
 }
 
 type();
+
+const elements=document.querySelectorAll(".fade");
+
+window.addEventListener("scroll",()=>{
+
+elements.forEach(el=>{
+
+const position=el.getBoundingClientRect().top;
+const screenHeight=window.innerHeight;
+
+if(position<screenHeight-100){
+el.classList.add("show");
+}
+
+});
+
+});
 
 </script>
 
