@@ -34,7 +34,6 @@ color:white;
 margin:20px;
 text-decoration:none;
 font-weight:bold;
-transition:0.3s;
 }
 
 nav a:hover{
@@ -86,6 +85,23 @@ width:60px;
 margin:20px;
 }
 
+/* PROJECT FILTER */
+
+.filter-buttons button{
+margin:10px;
+padding:10px 16px;
+background:#1e293b;
+color:white;
+border:none;
+border-radius:6px;
+cursor:pointer;
+}
+
+.filter-buttons button:hover{
+background:#38bdf8;
+color:black;
+}
+
 /* PROJECT GRID */
 
 .projects-grid{
@@ -96,17 +112,10 @@ margin-top:40px;
 }
 
 .project-card{
-
 background:rgba(255,255,255,0.05);
 border-radius:12px;
 overflow:hidden;
 border:1px solid rgba(255,255,255,0.1);
-transition:0.4s;
-
-}
-
-.project-card:hover{
-transform:translateY(-8px);
 }
 
 .project-card img{
@@ -134,11 +143,6 @@ margin:20px;
 text-align:left;
 }
 
-.cert-card a{
-color:#38bdf8;
-text-decoration:none;
-}
-
 /* TIMELINE */
 
 .timeline{
@@ -149,16 +153,6 @@ text-align:left;
 
 .timeline-item{
 margin-bottom:30px;
-}
-
-/* BUTTON */
-
-button{
-background:#38bdf8;
-border:none;
-padding:10px 18px;
-border-radius:6px;
-cursor:pointer;
 }
 
 /* FOOTER */
@@ -176,8 +170,6 @@ margin-top:50px;
 
 <body>
 
-<!-- NAV -->
-
 <nav>
 
 <a href="#">Home</a>
@@ -190,8 +182,6 @@ margin-top:50px;
 <a href="#contact">Contact</a>
 
 </nav>
-
-<!-- HERO -->
 
 <header>
 
@@ -206,153 +196,24 @@ margin-top:50px;
 Java, Spring Boot, React and AWS.
 </p>
 
-<br>
-
-<a href="Himasree_Full Stack_ Resume.pdf" target="_blank">
-<button>Download Resume</button>
-</a>
-
 </header>
-
-<!-- ABOUT -->
-
-<section id="about">
-
-<h2>About Me</h2>
-
-<p>
-Full Stack Developer experienced in building scalable cloud-native
-applications using Java, Spring Boot, React and AWS.
-</p>
-
-</section>
-
-<!-- SKILLS -->
-
-<section id="skills">
-
-<h2>Technical Skills</h2>
-
-<div class="skills">
-
-<span>Java</span>
-<span>Spring Boot</span>
-<span>React</span>
-<span>AWS</span>
-<span>Docker</span>
-<span>Kubernetes</span>
-<span>MySQL</span>
-<span>MongoDB</span>
-
-</div>
-
-<div class="tech-icons">
-
-<img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/java/java-original.svg">
-<img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/spring/spring-original.svg">
-<img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/react/react-original.svg">
-<img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/docker/docker-original.svg">
-<img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/kubernetes/kubernetes-plain.svg">
-<img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/mysql/mysql-original.svg">
-<img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/mongodb/mongodb-original.svg">
-
-</div>
-
-</section>
-
-<!-- EDUCATION -->
-
-<section id="education">
-
-<h2>Education</h2>
-
-<div class="list-line">- Master's in Computer Science</div>
-<div class="list-line">- University of Central Missouri</div>
-<div class="list-line">- United States</div>
-
-</section>
-
-<!-- CERTIFICATIONS -->
-
-<section id="certifications">
-
-<h2>Certifications</h2>
-
-<div class="cert-card">
-
-<h3>Generative AI</h3>
-
-<p>Issued by LinkedIn Learning</p>
-
-<a href="https://www.linkedin.com/learning/certificates/3d862cd8a1b708ca34a991c7b56ffedb6281444db0294cf21b08cc6660a661f3?trk=share_certificate" target="_blank">
-View Certificate
-</a>
-
-</div>
-
-<div class="cert-card">
-
-<h3>Introduction to Generative AI</h3>
-
-<p>Issued by Google Cloud</p>
-
-<a href="https://www.skills.google/public_profiles/ea522563-0f69-432d-891d-d2e551c64ca5/badges/22152109" target="_blank">
-View Certificate
-</a>
-
-</div>
-
-<div class="cert-card">
-
-<h3>Java Foundations</h3>
-
-<p>Issued by Oracle</p>
-
-</div>
-
-<div class="cert-card">
-
-<h3>Oracle Fundamental Associate 2023</h3>
-
-<p>Issued by Accenture</p>
-
-</div>
-
-</section>
-
-<!-- EXPERIENCE -->
-
-<section id="experience">
-
-<h2>Professional Experience</h2>
-
-<div class="timeline">
-
-<div class="timeline-item">
-
-<h3>Full Stack Developer</h3>
-<p><strong>Find Me – New York</strong></p>
-
-<div class="list-line">- Developed scalable backend services using Java and Spring Boot</div>
-<div class="list-line">- Designed REST APIs and microservices architecture</div>
-<div class="list-line">- Containerized applications using Docker</div>
-<div class="list-line">- Deployed applications using Kubernetes</div>
-
-</div>
-
-</div>
-
-</section>
-
-<!-- PROJECTS -->
 
 <section id="projects">
 
 <h2>Projects</h2>
 
+<div class="filter-buttons">
+
+<button onclick="filterProjects('all')">All</button>
+<button onclick="filterProjects('fullstack')">Full Stack</button>
+<button onclick="filterProjects('cloud')">Cloud</button>
+<button onclick="filterProjects('microservices')">Microservices</button>
+
+</div>
+
 <div class="projects-grid">
 
-<div class="project-card">
+<div class="project-card microservices">
 
 <img src="project1.png">
 
@@ -360,8 +221,8 @@ View Certificate
 
 <h3>Spring Boot Microservices Platform</h3>
 
-<div class="list-line">- Designed API Gateway</div>
-<div class="list-line">- Built Spring Boot microservices</div>
+<div class="list-line">- API Gateway routing</div>
+<div class="list-line">- Spring Boot microservices</div>
 <div class="list-line">- Docker containerization</div>
 <div class="list-line">- Kubernetes deployment</div>
 
@@ -369,7 +230,7 @@ View Certificate
 
 </div>
 
-<div class="project-card">
+<div class="project-card fullstack">
 
 <img src="project2.png">
 
@@ -377,15 +238,15 @@ View Certificate
 
 <h3>React + Spring Boot Enterprise App</h3>
 
-<div class="list-line">- Built React frontend</div>
-<div class="list-line">- Developed Spring Boot APIs</div>
-<div class="list-line">- Integrated MySQL database</div>
+<div class="list-line">- React frontend</div>
+<div class="list-line">- Spring Boot APIs</div>
+<div class="list-line">- MySQL database</div>
 
 </div>
 
 </div>
 
-<div class="project-card">
+<div class="project-card cloud">
 
 <img src="project3.png">
 
@@ -393,9 +254,9 @@ View Certificate
 
 <h3>AWS Serverless Event Processing API</h3>
 
-<div class="list-line">- AWS Lambda functions</div>
-<div class="list-line">- API Gateway integration</div>
-<div class="list-line">- Step Functions workflows</div>
+<div class="list-line">- AWS Lambda</div>
+<div class="list-line">- API Gateway</div>
+<div class="list-line">- Step Functions</div>
 
 </div>
 
@@ -404,80 +265,30 @@ View Certificate
 </div>
 
 </section>
-
-<!-- CONTACT -->
-
-<section id="contact">
-
-<h2>Contact</h2>
-
-<p>Email: manthimasree@gmail.com</p>
-
-<p>
-GitHub:
-<a href="https://github.com/HimasreeManthina" style="color:#38bdf8;">
-github.com/HimasreeManthina
-</a>
-</p>
-
-<p>
-LinkedIn:
-<a href="https://www.linkedin.com/in/msree1412/" style="color:#38bdf8;">
-linkedin.com/in/msree1412
-</a>
-</p>
-
-</section>
-
-<footer>
-
-<p>© 2026 Himasree | Full Stack Developer</p>
-
-</footer>
 
 <script>
 
-const roles=[
-"Java Full Stack Developer",
-"Spring Boot Developer",
-"Cloud Engineer",
-"React Developer"
-];
+function filterProjects(category){
 
-let i=0;
-let j=0;
-let current="";
-let deleting=false;
+const projects=document.querySelectorAll(".project-card");
 
-function type(){
+projects.forEach(project=>{
 
-const element=document.getElementById("typing");
-
-if(i<roles.length){
-
-if(!deleting && j<=roles[i].length){
-current=roles[i].substring(0,j++);
-element.textContent=current;
+if(category==="all"){
+project.style.display="block";
 }
 
-if(deleting && j>=0){
-current=roles[i].substring(0,j--);
-element.textContent=current;
+else if(project.classList.contains(category)){
+project.style.display="block";
 }
 
-if(j==roles[i].length){deleting=true;}
-
-if(deleting && j==0){i++; deleting=false;}
-
+else{
+project.style.display="none";
 }
 
-if(i==roles.length){i=0;}
-
-setTimeout(type,100);
+});
 
 }
-
-type();
 
 </script>
 
