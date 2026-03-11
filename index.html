@@ -59,7 +59,7 @@ font-weight:bold;
 
 section{
 padding:70px 20px;
-max-width:900px;
+max-width:1000px;
 margin:auto;
 text-align:center;
 }
@@ -78,13 +78,6 @@ width:45px;
 margin:10px;
 }
 
-.project{
-background:#1e293b;
-padding:25px;
-margin:25px 0;
-border-radius:10px;
-}
-
 .timeline{
 border-left:3px solid #38bdf8;
 padding-left:20px;
@@ -97,17 +90,43 @@ margin-bottom:30px;
 
 .timeline-item h3{
 color:#38bdf8;
-margin-bottom:5px;
+}
+
+.projects-grid{
+display:grid;
+grid-template-columns:repeat(auto-fit,minmax(280px,1fr));
+gap:25px;
+margin-top:30px;
+}
+
+.project-card{
+background:#1e293b;
+padding:25px;
+border-radius:12px;
+transition:0.3s;
+}
+
+.project-card:hover{
+transform:translateY(-6px);
+}
+
+.tech-tag{
+display:inline-block;
+background:#0f172a;
+padding:6px 10px;
+margin:5px;
+border-radius:6px;
+font-size:12px;
 }
 
 button{
 background:#38bdf8;
 border:none;
-padding:12px 22px;
+padding:10px 18px;
 border-radius:6px;
 cursor:pointer;
-font-size:14px;
-margin-top:15px;
+font-size:13px;
+margin:8px;
 }
 
 button:hover{
@@ -149,8 +168,8 @@ Java Full Stack Developer | Cloud & Microservices Engineer
 </p>
 
 <p>
-5+ years experience building scalable enterprise applications using
-Java, Spring Boot, React and AWS.
+5+ years experience building scalable enterprise applications
+using Java, Spring Boot, React and AWS.
 </p>
 
 <a href="Himasree_Full Stack_ Resume.pdf" target="_blank">
@@ -170,8 +189,7 @@ applications using Java, Spring Boot, React and AWS.
 
 <p>
 Specialized in microservices architecture, REST APIs,
-containerized deployments using Docker and Kubernetes,
-and CI/CD pipelines.
+containerized deployments using Docker and Kubernetes.
 </p>
 
 </section>
@@ -220,13 +238,11 @@ and CI/CD pipelines.
 <div class="timeline-item">
 
 <h3>Full Stack Developer</h3>
-
 <p><strong>Find Me – New York</strong></p>
 
 <p>
 Developed scalable backend services using Java 17 and Spring Boot.
-Designed REST APIs and microservices deployed using Docker and Kubernetes.
-Improved system performance and scalability across cloud environments.
+Built microservices deployed with Docker and Kubernetes.
 </p>
 
 </div>
@@ -235,11 +251,9 @@ Improved system performance and scalability across cloud environments.
 
 <h3>Backend Developer</h3>
 
-<p><strong>Enterprise Application Development</strong></p>
-
 <p>
-Built enterprise applications using Spring Boot and React.
-Developed API integrations and optimized database performance using MySQL and MongoDB.
+Developed enterprise APIs using Spring Boot and optimized
+database performance using MySQL and MongoDB.
 </p>
 
 </div>
@@ -252,47 +266,76 @@ Developed API integrations and optimized database performance using MySQL and Mo
 
 <h2>Projects</h2>
 
-<div class="project">
+<div class="projects-grid">
 
-<h3>Cloud Native Microservices Platform</h3>
+<div class="project-card">
+
+<h3>Microservices Platform</h3>
 
 <p>
-Designed microservices architecture using Java, Spring Boot,
-Docker and Kubernetes for scalable cloud deployments.
+Cloud-native backend platform built using Java, Spring Boot
+and Kubernetes.
 </p>
 
+<div>
+
+<span class="tech-tag">Java</span>
+<span class="tech-tag">Spring Boot</span>
+<span class="tech-tag">Docker</span>
+
+</div>
+
 <a href="https://github.com/HimasreeManthina" target="_blank">
-<button>View Code</button>
+<button>GitHub</button>
 </a>
 
 </div>
 
-<div class="project">
+<div class="project-card">
 
-<h3>Full Stack Enterprise Web Application</h3>
+<h3>Full Stack Web Application</h3>
 
 <p>
-Built a modern full stack web application using React frontend
+Enterprise web platform built using React frontend
 and Spring Boot backend APIs.
 </p>
 
+<div>
+
+<span class="tech-tag">React</span>
+<span class="tech-tag">Spring Boot</span>
+<span class="tech-tag">MySQL</span>
+
+</div>
+
 <a href="https://github.com/HimasreeManthina" target="_blank">
-<button>View Code</button>
+<button>GitHub</button>
 </a>
 
 </div>
 
-<div class="project">
+<div class="project-card">
 
-<h3>AWS Serverless API Platform</h3>
+<h3>AWS Serverless API</h3>
 
 <p>
-Implemented serverless APIs using AWS Lambda and API Gateway.
+Serverless REST APIs built using AWS Lambda,
+API Gateway and DynamoDB.
 </p>
 
+<div>
+
+<span class="tech-tag">AWS</span>
+<span class="tech-tag">Lambda</span>
+<span class="tech-tag">API Gateway</span>
+
+</div>
+
 <a href="https://github.com/HimasreeManthina" target="_blank">
-<button>View Code</button>
+<button>GitHub</button>
 </a>
+
+</div>
 
 </div>
 
