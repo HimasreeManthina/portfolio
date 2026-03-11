@@ -19,7 +19,7 @@ background:linear-gradient(180deg,#020617,#0f172a);
 color:white;
 }
 
-/* NAVBAR */
+/* NAV */
 
 nav{
 background:#020617;
@@ -27,7 +27,6 @@ padding:18px;
 text-align:center;
 position:sticky;
 top:0;
-backdrop-filter:blur(10px);
 }
 
 nav a{
@@ -40,7 +39,6 @@ transition:0.3s;
 
 nav a:hover{
 color:#38bdf8;
-transform:scale(1.1);
 }
 
 /* HEADER */
@@ -79,12 +77,6 @@ background:#1e293b;
 padding:10px 16px;
 margin:8px;
 border-radius:8px;
-transition:0.3s;
-}
-
-.skills span:hover{
-background:#38bdf8;
-color:black;
 }
 
 /* TECH ICONS */
@@ -92,23 +84,6 @@ color:black;
 .tech-icons img{
 width:60px;
 margin:20px;
-transition:0.3s;
-}
-
-.tech-icons img:hover{
-transform:scale(1.2);
-}
-
-/* EXPERIENCE */
-
-.timeline{
-border-left:3px solid #38bdf8;
-padding-left:20px;
-text-align:left;
-}
-
-.timeline-item{
-margin-bottom:30px;
 }
 
 /* PROJECT GRID */
@@ -120,24 +95,18 @@ gap:30px;
 margin-top:40px;
 }
 
-/* PROJECT CARD */
-
 .project-card{
 
 background:rgba(255,255,255,0.05);
 border-radius:12px;
 overflow:hidden;
-backdrop-filter:blur(10px);
 border:1px solid rgba(255,255,255,0.1);
 transition:0.4s;
 
 }
 
 .project-card:hover{
-
-transform:translateY(-10px);
-box-shadow:0 10px 30px rgba(0,0,0,0.6);
-
+transform:translateY(-8px);
 }
 
 .project-card img{
@@ -155,6 +124,33 @@ text-align:left;
 margin:8px 0;
 }
 
+/* CERTIFICATIONS */
+
+.cert-card{
+background:#1e293b;
+padding:20px;
+border-radius:10px;
+margin:20px;
+text-align:left;
+}
+
+.cert-card a{
+color:#38bdf8;
+text-decoration:none;
+}
+
+/* TIMELINE */
+
+.timeline{
+border-left:3px solid #38bdf8;
+padding-left:20px;
+text-align:left;
+}
+
+.timeline-item{
+margin-bottom:30px;
+}
+
 /* BUTTON */
 
 button{
@@ -163,12 +159,6 @@ border:none;
 padding:10px 18px;
 border-radius:6px;
 cursor:pointer;
-font-size:13px;
-transition:0.3s;
-}
-
-button:hover{
-background:#0ea5e9;
 }
 
 /* FOOTER */
@@ -193,6 +183,8 @@ margin-top:50px;
 <a href="#">Home</a>
 <a href="#about">About</a>
 <a href="#skills">Skills</a>
+<a href="#education">Education</a>
+<a href="#certifications">Certifications</a>
 <a href="#experience">Experience</a>
 <a href="#projects">Projects</a>
 <a href="#contact">Contact</a>
@@ -233,11 +225,6 @@ Full Stack Developer experienced in building scalable cloud-native
 applications using Java, Spring Boot, React and AWS.
 </p>
 
-<p>
-Specialized in REST APIs, microservices architecture,
-and cloud deployments using Docker and Kubernetes.
-</p>
-
 </section>
 
 <!-- SKILLS -->
@@ -268,7 +255,66 @@ and cloud deployments using Docker and Kubernetes.
 <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/kubernetes/kubernetes-plain.svg">
 <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/mysql/mysql-original.svg">
 <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/mongodb/mongodb-original.svg">
-<img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/amazonwebservices/amazonwebservices-original-wordmark.svg">
+
+</div>
+
+</section>
+
+<!-- EDUCATION -->
+
+<section id="education">
+
+<h2>Education</h2>
+
+<div class="list-line">- Master's in Computer Science</div>
+<div class="list-line">- University of Central Missouri</div>
+<div class="list-line">- United States</div>
+
+</section>
+
+<!-- CERTIFICATIONS -->
+
+<section id="certifications">
+
+<h2>Certifications</h2>
+
+<div class="cert-card">
+
+<h3>Generative AI</h3>
+
+<p>Issued by LinkedIn Learning</p>
+
+<a href="https://www.linkedin.com/learning/certificates/3d862cd8a1b708ca34a991c7b56ffedb6281444db0294cf21b08cc6660a661f3?trk=share_certificate" target="_blank">
+View Certificate
+</a>
+
+</div>
+
+<div class="cert-card">
+
+<h3>Introduction to Generative AI</h3>
+
+<p>Issued by Google Cloud</p>
+
+<a href="https://www.skills.google/public_profiles/ea522563-0f69-432d-891d-d2e551c64ca5/badges/22152109" target="_blank">
+View Certificate
+</a>
+
+</div>
+
+<div class="cert-card">
+
+<h3>Java Foundations</h3>
+
+<p>Issued by Oracle</p>
+
+</div>
+
+<div class="cert-card">
+
+<h3>Oracle Fundamental Associate 2023</h3>
+
+<p>Issued by Accenture</p>
 
 </div>
 
@@ -306,8 +352,6 @@ and cloud deployments using Docker and Kubernetes.
 
 <div class="projects-grid">
 
-<!-- PROJECT 1 -->
-
 <div class="project-card">
 
 <img src="project1.png">
@@ -316,16 +360,14 @@ and cloud deployments using Docker and Kubernetes.
 
 <h3>Spring Boot Microservices Platform</h3>
 
-<div class="list-line">- Designed API Gateway for routing</div>
+<div class="list-line">- Designed API Gateway</div>
 <div class="list-line">- Built Spring Boot microservices</div>
-<div class="list-line">- Containerized services using Docker</div>
-<div class="list-line">- Deployed using Kubernetes</div>
+<div class="list-line">- Docker containerization</div>
+<div class="list-line">- Kubernetes deployment</div>
 
 </div>
 
 </div>
-
-<!-- PROJECT 2 -->
 
 <div class="project-card">
 
@@ -338,13 +380,10 @@ and cloud deployments using Docker and Kubernetes.
 <div class="list-line">- Built React frontend</div>
 <div class="list-line">- Developed Spring Boot APIs</div>
 <div class="list-line">- Integrated MySQL database</div>
-<div class="list-line">- Implemented authentication</div>
 
 </div>
 
 </div>
-
-<!-- PROJECT 3 -->
 
 <div class="project-card">
 
@@ -354,10 +393,9 @@ and cloud deployments using Docker and Kubernetes.
 
 <h3>AWS Serverless Event Processing API</h3>
 
-<div class="list-line">- Designed serverless architecture</div>
-<div class="list-line">- Implemented Lambda functions</div>
-<div class="list-line">- Used API Gateway</div>
-<div class="list-line">- Integrated Step Functions</div>
+<div class="list-line">- AWS Lambda functions</div>
+<div class="list-line">- API Gateway integration</div>
+<div class="list-line">- Step Functions workflows</div>
 
 </div>
 
