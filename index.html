@@ -45,7 +45,7 @@ color:#38bdf8;
 
 header{
 text-align:center;
-padding:100px 20px;
+padding:120px 20px 80px;
 }
 
 .profile-img{
@@ -71,8 +71,7 @@ border-radius:8px;
 text-decoration:none;
 font-weight:bold;
 display:inline-block;
-margin-top:20px;
-margin-right:10px;
+margin:10px;
 transition:0.3s;
 }
 
@@ -80,13 +79,21 @@ transition:0.3s;
 transform:scale(1.05);
 }
 
-/* SECTION */
+/* SECTIONS */
 
 section{
 padding:80px 20px;
 max-width:1100px;
 margin:auto;
 text-align:center;
+opacity:0;
+transform:translateY(40px);
+transition:0.8s;
+}
+
+section.show{
+opacity:1;
+transform:translateY(0);
 }
 
 /* SKILLS */
@@ -165,6 +172,19 @@ margin:5px;
 font-size:12px;
 }
 
+/* PROJECT BUTTONS */
+
+.project-buttons{
+margin-top:10px;
+}
+
+.project-buttons a{
+color:#38bdf8;
+margin-right:15px;
+text-decoration:none;
+font-weight:bold;
+}
+
 /* TIMELINE */
 
 .timeline{
@@ -179,11 +199,16 @@ margin-bottom:30px;
 
 /* CONTACT */
 
-.contact-links a{
+.contact-box{
+margin-top:20px;
+}
+
+.contact-box a{
 color:#38bdf8;
-margin:10px;
+margin:15px;
 text-decoration:none;
 font-weight:bold;
+font-size:18px;
 }
 
 /* FOOTER */
@@ -357,9 +382,11 @@ using Docker and Kubernetes.
 <div class="line">- Docker containerization</div>
 <div class="line">- Kubernetes deployment</div>
 
-<a href="https://github.com/HimasreeManthina">
-View Code →
-</a>
+<div class="project-buttons">
+
+<a href="https://github.com/HimasreeManthina">Code</a>
+
+</div>
 
 </div>
 
@@ -381,9 +408,11 @@ View Code →
 <div class="line">- Spring Boot APIs</div>
 <div class="line">- MySQL database</div>
 
-<a href="https://github.com/HimasreeManthina">
-View Code →
-</a>
+<div class="project-buttons">
+
+<a href="https://github.com/HimasreeManthina">Code</a>
+
+</div>
 
 </div>
 
@@ -404,9 +433,11 @@ View Code →
 <div class="line">- API Gateway</div>
 <div class="line">- Step Functions</div>
 
-<a href="https://github.com/HimasreeManthina">
-View Code →
-</a>
+<div class="project-buttons">
+
+<a href="https://github.com/HimasreeManthina">Code</a>
+
+</div>
 
 </div>
 
@@ -447,7 +478,7 @@ View Code →
 <p>Email: manthimasree@gmail.com</p>
 <p>Location: Plano, Texas</p>
 
-<div class="contact-links">
+<div class="contact-box">
 
 <a href="https://github.com/HimasreeManthina">GitHub</a>
 <a href="https://linkedin.com">LinkedIn</a>
@@ -464,6 +495,8 @@ View Code →
 
 <script>
 
+/* typing */
+
 const text="Java Full Stack Developer | Spring Boot | React | AWS";
 let i=0;
 
@@ -476,6 +509,24 @@ setTimeout(typing,60);
 }
 
 typing();
+
+/* scroll animation */
+
+const sections=document.querySelectorAll("section");
+
+window.addEventListener("scroll",()=>{
+
+sections.forEach(section=>{
+
+const top=section.getBoundingClientRect().top;
+
+if(top<window.innerHeight-100){
+section.classList.add("show");
+}
+
+});
+
+});
 
 </script>
 
