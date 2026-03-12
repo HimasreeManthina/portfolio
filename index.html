@@ -1,6 +1,5 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
 
 <meta charset="UTF-8">
@@ -13,7 +12,7 @@
 html{scroll-behavior:smooth;}
 
 body{
-font-family:Arial;
+font-family:Arial, Helvetica, sans-serif;
 margin:0;
 background:linear-gradient(180deg,#020617,#0f172a);
 color:white;
@@ -41,7 +40,7 @@ nav a:hover{
 color:#38bdf8;
 }
 
-/* HEADER */
+/* HERO */
 
 header{
 text-align:center;
@@ -61,7 +60,9 @@ font-size:22px;
 margin-top:10px;
 }
 
-/* BUTTON */
+.hero-buttons{
+margin-top:20px;
+}
 
 .btn{
 background:#38bdf8;
@@ -70,8 +71,8 @@ padding:12px 22px;
 border-radius:8px;
 text-decoration:none;
 font-weight:bold;
+margin:8px;
 display:inline-block;
-margin:10px;
 transition:0.3s;
 }
 
@@ -124,7 +125,7 @@ transition:0.3s;
 transform:scale(1.2);
 }
 
-/* PROJECT GRID */
+/* PROJECTS */
 
 .projects-grid{
 display:grid;
@@ -161,8 +162,6 @@ text-align:left;
 margin:6px 0;
 }
 
-/* BADGES */
-
 .badge{
 display:inline-block;
 background:#1e293b;
@@ -171,8 +170,6 @@ border-radius:6px;
 margin:5px;
 font-size:12px;
 }
-
-/* PROJECT BUTTONS */
 
 .project-buttons{
 margin-top:10px;
@@ -197,18 +194,21 @@ text-align:left;
 margin-bottom:30px;
 }
 
-/* CONTACT */
+/* GITHUB SECTION */
 
-.contact-box{
-margin-top:20px;
+.github-section img{
+margin:15px;
+max-width:100%;
 }
 
-.contact-box a{
+/* CONTACT */
+
+.contact-links a{
 color:#38bdf8;
 margin:15px;
+font-size:18px;
 text-decoration:none;
 font-weight:bold;
-font-size:18px;
 }
 
 /* FOOTER */
@@ -218,6 +218,21 @@ background:#020617;
 padding:25px;
 text-align:center;
 margin-top:50px;
+}
+
+/* MOBILE */
+
+@media(max-width:600px){
+
+nav a{
+display:block;
+margin:10px 0;
+}
+
+.profile-img{
+width:120px;
+}
+
 }
 
 </style>
@@ -233,6 +248,7 @@ margin-top:50px;
 <a href="#skills">Skills</a>
 <a href="#experience">Experience</a>
 <a href="#projects">Projects</a>
+<a href="#github">GitHub</a>
 <a href="#education">Education</a>
 <a href="#contact">Contact</a>
 
@@ -247,22 +263,17 @@ margin-top:50px;
 <p class="typing" id="typing"></p>
 
 <p>
-Java Full Stack Developer specializing in building scalable
-microservices and cloud-native applications using
-Java, Spring Boot, React and AWS.
+Java Full Stack Developer building scalable microservices
+and cloud-native applications using Java, Spring Boot, React and AWS.
 </p>
 
-<a href="Himasree_Full_Stack_Resume.pdf" download class="btn">
-Download Resume
-</a>
+<div class="hero-buttons">
 
-<a href="https://github.com/HimasreeManthina" class="btn">
-GitHub
-</a>
+<a href="Himasree_Full_Stack_Resume.pdf" download class="btn">Resume</a>
+<a href="https://github.com/HimasreeManthina" class="btn">GitHub</a>
+<a href="https://linkedin.com" class="btn">LinkedIn</a>
 
-<a href="https://linkedin.com" class="btn">
-LinkedIn
-</a>
+</div>
 
 </header>
 
@@ -272,13 +283,11 @@ LinkedIn
 
 <p>
 
-I am a Java Full Stack Developer with 5+ years of experience
-building enterprise applications using Java, Spring Boot,
-React, Angular and AWS.
+Java Full Stack Developer with 5+ years of experience building
+enterprise applications using Java, Spring Boot, React, Angular and AWS.
 
-I specialize in designing microservices architectures,
-developing REST APIs and deploying cloud-native applications
-using Docker and Kubernetes.
+Focused on microservices architecture, scalable REST APIs,
+and cloud-native deployments using Docker and Kubernetes.
 
 </p>
 
@@ -383,9 +392,7 @@ using Docker and Kubernetes.
 <div class="line">- Kubernetes deployment</div>
 
 <div class="project-buttons">
-
 <a href="https://github.com/HimasreeManthina">Code</a>
-
 </div>
 
 </div>
@@ -409,39 +416,26 @@ using Docker and Kubernetes.
 <div class="line">- MySQL database</div>
 
 <div class="project-buttons">
-
 <a href="https://github.com/HimasreeManthina">Code</a>
-
 </div>
 
 </div>
 
 </div>
 
-<div class="project-card">
-
-<img src="project3.png">
-
-<div class="project-content">
-
-<h3>AWS Serverless Event Processing API</h3>
-
-<div class="badge">AWS</div>
-<div class="badge">Lambda</div>
-
-<div class="line">- AWS Lambda</div>
-<div class="line">- API Gateway</div>
-<div class="line">- Step Functions</div>
-
-<div class="project-buttons">
-
-<a href="https://github.com/HimasreeManthina">Code</a>
-
 </div>
 
-</div>
+</section>
 
-</div>
+<section id="github">
+
+<h2>GitHub Activity</h2>
+
+<div class="github-section">
+
+<img src="https://github-readme-stats.vercel.app/api?username=HimasreeManthina&show_icons=true&theme=tokyonight">
+
+<img src="https://github-readme-streak-stats.herokuapp.com/?user=HimasreeManthina&theme=tokyonight">
 
 </div>
 
@@ -454,17 +448,13 @@ using Docker and Kubernetes.
 <div class="timeline">
 
 <div class="timeline-item">
-
 <h3>Master's in Computer Science</h3>
 <p>Avila University (2024 – 2025)</p>
-
 </div>
 
 <div class="timeline-item">
-
 <h3>Bachelor’s Degree</h3>
 <p>Aditya University (2018 – 2021)</p>
-
 </div>
 
 </div>
@@ -478,11 +468,9 @@ using Docker and Kubernetes.
 <p>Email: manthimasree@gmail.com</p>
 <p>Location: Plano, Texas</p>
 
-<div class="contact-box">
-
+<div class="contact-links">
 <a href="https://github.com/HimasreeManthina">GitHub</a>
 <a href="https://linkedin.com">LinkedIn</a>
-
 </div>
 
 </section>
@@ -494,8 +482,6 @@ using Docker and Kubernetes.
 </footer>
 
 <script>
-
-/* typing */
 
 const text="Java Full Stack Developer | Spring Boot | React | AWS";
 let i=0;
@@ -510,14 +496,11 @@ setTimeout(typing,60);
 
 typing();
 
-/* scroll animation */
-
 const sections=document.querySelectorAll("section");
 
 window.addEventListener("scroll",()=>{
 
 sections.forEach(section=>{
-
 const top=section.getBoundingClientRect().top;
 
 if(top<window.innerHeight-100){
