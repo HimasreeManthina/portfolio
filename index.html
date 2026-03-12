@@ -13,10 +13,11 @@
 html{scroll-behavior:smooth;}
 
 body{
-font-family:Arial;
+font-family:Arial, Helvetica, sans-serif;
 margin:0;
 background:linear-gradient(180deg,#020617,#0f172a);
 color:white;
+line-height:1.6;
 }
 
 /* NAVBAR */
@@ -32,7 +33,7 @@ z-index:1000;
 
 nav a{
 color:white;
-margin:20px;
+margin:0 18px;
 text-decoration:none;
 font-weight:bold;
 }
@@ -45,13 +46,14 @@ color:#38bdf8;
 
 header{
 text-align:center;
-padding:120px 20px;
+padding:140px 20px 100px;
 }
 
 .profile-img{
-width:160px;
+width:150px;
 border-radius:50%;
 border:4px solid #38bdf8;
+margin-bottom:20px;
 }
 
 .typing{
@@ -61,24 +63,47 @@ font-size:22px;
 margin-top:10px;
 }
 
+.hero-buttons{
+margin-top:25px;
+}
+
 .btn{
 background:#38bdf8;
 color:black;
-padding:12px 22px;
+padding:12px 24px;
 border-radius:8px;
 text-decoration:none;
 font-weight:bold;
-display:inline-block;
 margin:10px;
+display:inline-block;
+transition:0.3s;
+}
+
+.btn:hover{
+transform:scale(1.05);
 }
 
 /* SECTIONS */
 
 section{
-padding:80px 20px;
+padding:90px 20px;
 max-width:1100px;
 margin:auto;
 text-align:center;
+}
+
+section h2{
+font-size:32px;
+margin-bottom:20px;
+color:#38bdf8;
+}
+
+/* ABOUT */
+
+.about-text{
+max-width:750px;
+margin:auto;
+font-size:17px;
 }
 
 /* SKILLS */
@@ -86,32 +111,47 @@ text-align:center;
 .skills span{
 display:inline-block;
 background:#1e293b;
-padding:10px 16px;
+padding:10px 18px;
 margin:8px;
 border-radius:8px;
+font-size:14px;
 }
 
 /* TECH ICONS */
 
+.tech-icons{
+margin-top:20px;
+}
+
 .tech-icons img{
 width:60px;
-margin:20px;
+margin:18px;
+transition:0.3s;
+}
+
+.tech-icons img:hover{
+transform:scale(1.2);
 }
 
 /* EXPERIENCE */
 
 .timeline{
 border-left:3px solid #38bdf8;
-padding-left:20px;
+padding-left:25px;
 text-align:left;
+margin-top:30px;
 }
 
 .timeline-item{
 margin-bottom:40px;
 }
 
+.timeline-item h3{
+margin-bottom:6px;
+}
+
 .line{
-margin:6px 0;
+margin:5px 0;
 }
 
 /* PROJECTS */
@@ -128,10 +168,11 @@ background:#1e293b;
 border-radius:12px;
 overflow:hidden;
 transition:0.3s;
+text-align:left;
 }
 
 .project-card:hover{
-transform:translateY(-6px);
+transform:translateY(-8px);
 }
 
 .project-card img{
@@ -142,13 +183,12 @@ object-fit:cover;
 
 .project-content{
 padding:20px;
-text-align:left;
 }
 
 .badge{
 display:inline-block;
 background:#020617;
-padding:6px 10px;
+padding:6px 12px;
 border-radius:6px;
 margin:5px;
 font-size:12px;
@@ -156,9 +196,13 @@ font-size:12px;
 
 /* CONTACT */
 
+.contact-links{
+margin-top:20px;
+}
+
 .contact-links a{
 color:#38bdf8;
-margin:15px;
+margin:0 15px;
 font-size:18px;
 text-decoration:none;
 }
@@ -203,9 +247,13 @@ Java Full Stack Developer building scalable microservices and
 cloud-native applications using Java, Spring Boot, React and AWS.
 </p>
 
+<div class="hero-buttons">
+
 <a href="Himasree_Full_Stack_Resume.pdf" download class="btn">Resume</a>
 <a href="https://github.com/HimasreeManthina" class="btn">GitHub</a>
 <a href="https://linkedin.com" class="btn">LinkedIn</a>
+
+</div>
 
 </header>
 
@@ -213,13 +261,14 @@ cloud-native applications using Java, Spring Boot, React and AWS.
 
 <h2>About Me</h2>
 
-<p>
+<p class="about-text">
 
 Full Stack Developer with 5+ years of experience building
-enterprise applications using Java, Spring Boot, React, Angular and AWS.
+enterprise applications using Java, Spring Boot, React,
+Angular and AWS.
 
-Focused on microservices architecture, REST APIs, and
-cloud-native deployments using Docker and Kubernetes.
+Focused on microservices architecture, scalable REST APIs,
+and cloud-native deployments using Docker and Kubernetes.
 
 </p>
 
@@ -274,19 +323,19 @@ cloud-native deployments using Docker and Kubernetes.
 
 <div class="timeline-item">
 
-<h3>Full Stack Engineer – Find Me</h3>
+<h3>Full Stack Engineer — Find Me</h3>
 <p>New York | 2024 – Present</p>
 
-<div class="line">- Built cloud-native backend services using Java 17 and Spring Boot</div>
-<div class="line">- Containerized applications using Docker and deployed using Kubernetes</div>
-<div class="line">- Migrated modules to Azure Functions integrated with Cosmos DB</div>
+<div class="line">- Built backend services using Java 17 and Spring Boot</div>
+<div class="line">- Containerized applications using Docker and Kubernetes</div>
+<div class="line">- Migrated modules to Azure Functions with Cosmos DB</div>
 <div class="line">- Automated CI/CD pipelines using Azure DevOps</div>
 
 </div>
 
 <div class="timeline-item">
 
-<h3>Full Stack Developer – Accenture</h3>
+<h3>Full Stack Developer — Accenture</h3>
 <p>2022 – 2023</p>
 
 <div class="line">- Developed Spring Boot microservices and REST APIs</div>
@@ -298,12 +347,12 @@ cloud-native deployments using Docker and Kubernetes.
 
 <div class="timeline-item">
 
-<h3>Junior Java Developer – Surya Allied Services</h3>
+<h3>Junior Java Developer — Surya Allied Services</h3>
 <p>2020 – 2021</p>
 
 <div class="line">- Developed backend modules using Java and Spring Boot</div>
-<div class="line">- Built REST APIs for internal enterprise applications</div>
-<div class="line">- Developed a React + TypeScript admin dashboard</div>
+<div class="line">- Built REST APIs for enterprise applications</div>
+<div class="line">- Developed React + TypeScript admin dashboard</div>
 <div class="line">- Containerized development environments using Docker</div>
 
 </div>
@@ -333,7 +382,7 @@ cloud-native deployments using Docker and Kubernetes.
 <p>
 
 Microservices architecture platform built with Spring Boot,
-API gateway routing and containerized deployments using Docker and Kubernetes.
+API gateway routing and containerized deployments.
 
 </p>
 
@@ -355,8 +404,8 @@ API gateway routing and containerized deployments using Docker and Kubernetes.
 
 <p>
 
-Full stack enterprise application with React frontend and
-Spring Boot REST APIs powering backend business logic.
+Full stack enterprise application with React frontend
+and Spring Boot backend APIs.
 
 </p>
 
@@ -377,8 +426,8 @@ Spring Boot REST APIs powering backend business logic.
 
 <p>
 
-Serverless event processing system built using AWS Lambda,
-API Gateway and event driven architecture.
+Serverless event-driven backend using AWS Lambda,
+API Gateway and event processing architecture.
 
 </p>
 
