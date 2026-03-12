@@ -6,16 +6,18 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 
-<title>Himasree | Full Stack Developer</title>
+<title>Himasree Manthina | Full Stack Developer</title>
 
 <style>
+
+/* GLOBAL */
 
 html{scroll-behavior:smooth;}
 
 body{
-font-family:Arial, Helvetica, sans-serif;
 margin:0;
-background:linear-gradient(180deg,#020617,#0f172a);
+font-family:Arial, Helvetica, sans-serif;
+background:#000;
 color:white;
 line-height:1.6;
 }
@@ -23,196 +25,206 @@ line-height:1.6;
 /* NAVBAR */
 
 nav{
-background:#020617;
-padding:18px;
-text-align:center;
+background:black;
+padding:22px 8%;
+display:flex;
+justify-content:space-between;
+align-items:center;
+border-bottom:1px solid #222;
 position:sticky;
 top:0;
 z-index:1000;
 }
 
+.logo{
+color:#c9a24c;
+font-size:20px;
+letter-spacing:2px;
+}
+
 nav a{
-color:white;
-margin:0 18px;
+color:#aaa;
+margin-left:25px;
 text-decoration:none;
-font-weight:bold;
+font-size:14px;
 }
 
 nav a:hover{
-color:#38bdf8;
+color:#c9a24c;
 }
 
 /* HERO */
 
-header{
-text-align:center;
-padding:140px 20px 100px;
+.hero{
+height:100vh;
+display:flex;
+align-items:center;
+justify-content:space-between;
+padding:0 8%;
 }
 
-.profile-img{
-width:150px;
-border-radius:50%;
-border:4px solid #38bdf8;
+/* LEFT SIDE */
+
+.hero-left{
+max-width:600px;
+}
+
+.hero-role{
+letter-spacing:3px;
+color:#c9a24c;
+font-size:14px;
 margin-bottom:20px;
 }
 
-.typing{
-color:#38bdf8;
-font-weight:bold;
-font-size:22px;
-margin-top:10px;
+.hero-name{
+font-size:85px;
+line-height:90px;
+margin:0;
+}
+
+.hero-tagline{
+margin-top:20px;
+color:#aaa;
+max-width:480px;
 }
 
 .hero-buttons{
-margin-top:25px;
+margin-top:40px;
 }
 
-.btn{
-background:#38bdf8;
+.btn-primary{
+background:#c9a24c;
 color:black;
-padding:12px 24px;
-border-radius:8px;
+padding:14px 28px;
 text-decoration:none;
 font-weight:bold;
-margin:10px;
+margin-right:15px;
 display:inline-block;
-transition:0.3s;
 }
 
-.btn:hover{
-transform:scale(1.05);
+.btn-outline{
+border:1px solid #444;
+padding:14px 28px;
+text-decoration:none;
+color:white;
+display:inline-block;
+}
+
+/* RIGHT SIDE STACK */
+
+.hero-right{
+display:flex;
+flex-direction:column;
+gap:20px;
+}
+
+.stack-card{
+border:1px solid #333;
+padding:14px 22px;
+color:#c9a24c;
+width:220px;
+text-align:center;
+animation:float 6s ease-in-out infinite;
+}
+
+/* FLOAT ANIMATION */
+
+@keyframes float{
+
+0%{transform:translateY(0px);}
+50%{transform:translateY(-10px);}
+100%{transform:translateY(0px);}
+
 }
 
 /* SECTIONS */
 
 section{
-padding:90px 20px;
+padding:90px 8%;
 max-width:1100px;
 margin:auto;
-text-align:center;
 }
 
 section h2{
-font-size:32px;
-margin-bottom:20px;
-color:#38bdf8;
+color:#c9a24c;
+margin-bottom:30px;
 }
 
 /* ABOUT */
 
 .about-text{
-max-width:750px;
-margin:auto;
-font-size:17px;
+max-width:700px;
+color:#bbb;
 }
 
 /* SKILLS */
 
 .skills span{
 display:inline-block;
-background:#1e293b;
-padding:10px 18px;
+border:1px solid #333;
+padding:10px 16px;
 margin:8px;
-border-radius:8px;
-font-size:14px;
-}
-
-/* TECH ICONS */
-
-.tech-icons{
-margin-top:20px;
-}
-
-.tech-icons img{
-width:60px;
-margin:18px;
-transition:0.3s;
-}
-
-.tech-icons img:hover{
-transform:scale(1.2);
+border-radius:6px;
 }
 
 /* EXPERIENCE */
 
 .timeline{
-border-left:3px solid #38bdf8;
-padding-left:25px;
-text-align:left;
-margin-top:30px;
+border-left:2px solid #c9a24c;
+padding-left:20px;
 }
 
 .timeline-item{
-margin-bottom:40px;
-}
-
-.timeline-item h3{
-margin-bottom:6px;
+margin-bottom:35px;
 }
 
 .line{
-margin:5px 0;
+margin:6px 0;
+color:#bbb;
 }
 
 /* PROJECTS */
 
 .projects-grid{
 display:grid;
-grid-template-columns:repeat(auto-fit,minmax(320px,1fr));
+grid-template-columns:repeat(auto-fit,minmax(300px,1fr));
 gap:30px;
-margin-top:40px;
 }
 
 .project-card{
-background:#1e293b;
-border-radius:12px;
-overflow:hidden;
+border:1px solid #222;
+padding:25px;
 transition:0.3s;
-text-align:left;
 }
 
 .project-card:hover{
-transform:translateY(-8px);
-}
-
-.project-card img{
-width:100%;
-height:200px;
-object-fit:cover;
-}
-
-.project-content{
-padding:20px;
+border:1px solid #c9a24c;
+transform:translateY(-6px);
 }
 
 .badge{
 display:inline-block;
-background:#020617;
-padding:6px 12px;
-border-radius:6px;
+border:1px solid #333;
+padding:5px 10px;
 margin:5px;
 font-size:12px;
+color:#c9a24c;
 }
 
 /* CONTACT */
 
-.contact-links{
-margin-top:20px;
-}
-
 .contact-links a{
-color:#38bdf8;
-margin:0 15px;
-font-size:18px;
+color:#c9a24c;
+margin-right:20px;
 text-decoration:none;
 }
 
 /* FOOTER */
 
 footer{
-background:#020617;
-padding:25px;
 text-align:center;
+padding:30px;
+border-top:1px solid #222;
 margin-top:50px;
 }
 
@@ -224,34 +236,52 @@ margin-top:50px;
 
 <nav>
 
-<a href="#">Home</a>
-<a href="#about">About</a>
-<a href="#skills">Skills</a>
-<a href="#experience">Experience</a>
-<a href="#projects">Projects</a>
-<a href="#education">Education</a>
-<a href="#contact">Contact</a>
+<div class="logo">Himasree M.</div>
+
+<div>
+<a href="#about">ABOUT</a>
+<a href="#skills">SKILLS</a>
+<a href="#projects">PROJECTS</a>
+<a href="#experience">EXPERIENCE</a>
+<a href="#education">EDUCATION</a>
+<a href="#contact">CONTACT</a>
+</div>
 
 </nav>
 
-<header>
+<header class="hero">
 
-<img src="Profile.jpeg" class="profile-img">
+<div class="hero-left">
 
-<h1>Hi, I'm Himasree 👋</h1>
+<p class="hero-role">FULL STACK DEVELOPER · JAVA ENGINEER</p>
 
-<p class="typing" id="typing"></p>
+<h1 class="hero-name">
+Himasree<br>
+Manthina
+</h1>
 
-<p>
-Java Full Stack Developer building scalable microservices and
-cloud-native applications using Java, Spring Boot, React and AWS.
+<p class="hero-tagline">
+Building scalable enterprise systems and microservices using
+Java, Spring Boot, React, and cloud-native architecture.
 </p>
 
 <div class="hero-buttons">
 
-<a href="Himasree_Full_Stack_Resume.pdf" download class="btn">Resume</a>
-<a href="https://github.com/HimasreeManthina" class="btn">GitHub</a>
-<a href="https://linkedin.com" class="btn">LinkedIn</a>
+<a href="#projects" class="btn-primary">VIEW MY WORK</a>
+<a href="#contact" class="btn-outline">GET IN TOUCH</a>
+
+</div>
+
+</div>
+
+
+<div class="hero-right">
+
+<div class="stack-card">Java · Spring Boot</div>
+<div class="stack-card">React · Angular</div>
+<div class="stack-card">Docker · Kubernetes</div>
+<div class="stack-card">AWS · Microservices</div>
+<div class="stack-card">REST APIs</div>
 
 </div>
 
@@ -259,15 +289,15 @@ cloud-native applications using Java, Spring Boot, React and AWS.
 
 <section id="about">
 
-<h2>About Me</h2>
+<h2>About</h2>
 
 <p class="about-text">
 
 Full Stack Developer with 5+ years of experience building
-enterprise applications using Java, Spring Boot, React,
-Angular and AWS.
+enterprise applications using Java, Spring Boot, React, Angular,
+and AWS.
 
-Focused on microservices architecture, scalable REST APIs,
+Specialized in microservices architecture, REST APIs,
 and cloud-native deployments using Docker and Kubernetes.
 
 </p>
@@ -291,25 +321,66 @@ and cloud-native deployments using Docker and Kubernetes.
 <span>Microservices</span>
 <span>MySQL</span>
 <span>MongoDB</span>
-<span>Jenkins</span>
 
 </div>
 
 </section>
 
-<section>
+<section id="projects">
 
-<h2>Tech Stack</h2>
+<h2>Projects</h2>
 
-<div class="tech-icons">
+<div class="projects-grid">
 
-<img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/java/java-original.svg">
-<img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/spring/spring-original.svg">
-<img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/react/react-original.svg">
-<img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/angularjs/angularjs-original.svg">
-<img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/docker/docker-original.svg">
-<img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/kubernetes/kubernetes-plain.svg">
-<img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/aws/aws-original.svg">
+<div class="project-card">
+
+<h3>Spring Boot Microservices Platform</h3>
+
+<div class="badge">Spring Boot</div>
+<div class="badge">Docker</div>
+<div class="badge">Kubernetes</div>
+
+<p>
+
+Microservices architecture platform with API gateway,
+containerized services and scalable deployments.
+
+</p>
+
+</div>
+
+<div class="project-card">
+
+<h3>React + Spring Boot Enterprise App</h3>
+
+<div class="badge">React</div>
+<div class="badge">Spring Boot</div>
+<div class="badge">MySQL</div>
+
+<p>
+
+Full stack application with React frontend and Spring Boot backend
+APIs powering enterprise workflows.
+
+</p>
+
+</div>
+
+<div class="project-card">
+
+<h3>AWS Serverless Event Processing API</h3>
+
+<div class="badge">AWS</div>
+<div class="badge">Lambda</div>
+
+<p>
+
+Event-driven backend system using AWS Lambda,
+API Gateway and serverless architecture.
+
+</p>
+
+</div>
 
 </div>
 
@@ -324,12 +395,12 @@ and cloud-native deployments using Docker and Kubernetes.
 <div class="timeline-item">
 
 <h3>Full Stack Engineer — Find Me</h3>
-<p>New York | 2024 – Present</p>
+<p>2024 – Present</p>
 
 <div class="line">- Built backend services using Java 17 and Spring Boot</div>
 <div class="line">- Containerized applications using Docker and Kubernetes</div>
 <div class="line">- Migrated modules to Azure Functions with Cosmos DB</div>
-<div class="line">- Automated CI/CD pipelines using Azure DevOps</div>
+<div class="line">- Implemented CI/CD pipelines using Azure DevOps</div>
 
 </div>
 
@@ -342,96 +413,6 @@ and cloud-native deployments using Docker and Kubernetes.
 <div class="line">- Built cloud APIs using AWS Lambda and API Gateway</div>
 <div class="line">- Automated infrastructure provisioning using AWS CDK</div>
 <div class="line">- Implemented CI/CD pipelines using Jenkins</div>
-
-</div>
-
-<div class="timeline-item">
-
-<h3>Junior Java Developer — Surya Allied Services</h3>
-<p>2020 – 2021</p>
-
-<div class="line">- Developed backend modules using Java and Spring Boot</div>
-<div class="line">- Built REST APIs for enterprise applications</div>
-<div class="line">- Developed React + TypeScript admin dashboard</div>
-<div class="line">- Containerized development environments using Docker</div>
-
-</div>
-
-</div>
-
-</section>
-
-<section id="projects">
-
-<h2>Projects</h2>
-
-<div class="projects-grid">
-
-<div class="project-card">
-
-<img src="project1.png">
-
-<div class="project-content">
-
-<h3>Spring Boot Microservices Platform</h3>
-
-<div class="badge">Spring Boot</div>
-<div class="badge">Docker</div>
-<div class="badge">Kubernetes</div>
-
-<p>
-
-Microservices architecture platform built with Spring Boot,
-API gateway routing and containerized deployments.
-
-</p>
-
-</div>
-
-</div>
-
-<div class="project-card">
-
-<img src="project2.png">
-
-<div class="project-content">
-
-<h3>React + Spring Boot Enterprise Application</h3>
-
-<div class="badge">React</div>
-<div class="badge">Spring Boot</div>
-<div class="badge">MySQL</div>
-
-<p>
-
-Full stack enterprise application with React frontend
-and Spring Boot backend APIs.
-
-</p>
-
-</div>
-
-</div>
-
-<div class="project-card">
-
-<img src="project3.png">
-
-<div class="project-content">
-
-<h3>AWS Serverless Event Processing API</h3>
-
-<div class="badge">AWS</div>
-<div class="badge">Lambda</div>
-
-<p>
-
-Serverless event-driven backend using AWS Lambda,
-API Gateway and event processing architecture.
-
-</p>
-
-</div>
 
 </div>
 
@@ -457,7 +438,7 @@ API Gateway and event processing architecture.
 
 <div class="contact-links">
 
-<a href="https://github.com/HimasreeManthina">GitHub</a>
+<a href="https://github.com">GitHub</a>
 <a href="https://linkedin.com">LinkedIn</a>
 
 </div>
@@ -466,26 +447,10 @@ API Gateway and event processing architecture.
 
 <footer>
 
-<p>© 2026 Himasree | Full Stack Developer</p>
+<p>© 2026 Himasree Manthina</p>
 
 </footer>
 
-<script>
-
-const text="Java Full Stack Developer | Spring Boot | React | AWS";
-let i=0;
-
-function typing(){
-if(i<text.length){
-document.getElementById("typing").innerHTML+=text.charAt(i);
-i++;
-setTimeout(typing,60);
-}
-}
-
-typing();
-
-</script>
-
 </body>
+
 </html>
