@@ -12,27 +12,29 @@
 
 /* GLOBAL */
 
-html{scroll-behavior:smooth;}
+html{
+scroll-behavior:smooth;
+}
 
 body{
 margin:0;
-font-family:Arial, Helvetica, sans-serif;
 background:#000;
-color:white;
-line-height:1.6;
+color:#ddd;
+font-family:Arial, Helvetica, sans-serif;
+line-height:1.7;
 }
 
 /* NAVBAR */
 
 nav{
-background:black;
-padding:22px 8%;
 display:flex;
 justify-content:space-between;
 align-items:center;
+padding:22px 8%;
 border-bottom:1px solid #222;
 position:sticky;
 top:0;
+background:black;
 z-index:1000;
 }
 
@@ -44,7 +46,7 @@ letter-spacing:2px;
 
 nav a{
 color:#aaa;
-margin-left:25px;
+margin-left:28px;
 text-decoration:none;
 font-size:14px;
 }
@@ -63,8 +65,6 @@ justify-content:space-between;
 padding:0 8%;
 }
 
-/* LEFT SIDE */
-
 .hero-left{
 max-width:600px;
 }
@@ -82,7 +82,7 @@ line-height:90px;
 margin:0;
 }
 
-.hero-tagline{
+.hero-desc{
 margin-top:20px;
 color:#aaa;
 max-width:480px;
@@ -99,7 +99,6 @@ padding:14px 28px;
 text-decoration:none;
 font-weight:bold;
 margin-right:15px;
-display:inline-block;
 }
 
 .btn-outline{
@@ -107,10 +106,9 @@ border:1px solid #444;
 padding:14px 28px;
 text-decoration:none;
 color:white;
-display:inline-block;
 }
 
-/* RIGHT SIDE STACK */
+/* FLOATING STACK */
 
 .hero-right{
 display:flex;
@@ -127,8 +125,6 @@ text-align:center;
 animation:float 6s ease-in-out infinite;
 }
 
-/* FLOAT ANIMATION */
-
 @keyframes float{
 
 0%{transform:translateY(0px);}
@@ -137,34 +133,104 @@ animation:float 6s ease-in-out infinite;
 
 }
 
-/* SECTIONS */
+/* SECTION */
 
 section{
-padding:90px 8%;
+padding:100px 8%;
 max-width:1100px;
 margin:auto;
 }
 
-section h2{
+/* SECTION TITLE */
+
+.section-title{
+display:flex;
+align-items:center;
+margin-bottom:40px;
+}
+
+.section-number{
 color:#c9a24c;
-margin-bottom:30px;
+margin-right:20px;
+font-size:14px;
+}
+
+.section-title h2{
+color:white;
+font-size:40px;
+margin:0;
+}
+
+.section-title span{
+color:#c9a24c;
+}
+
+.divider{
+height:1px;
+background:#222;
+flex:1;
+margin-left:20px;
 }
 
 /* ABOUT */
 
 .about-text{
 max-width:700px;
-color:#bbb;
+color:#aaa;
 }
 
-/* SKILLS */
+/* SKILLS GRID */
 
-.skills span{
-display:inline-block;
+.skills-grid{
+display:grid;
+grid-template-columns:repeat(auto-fit,minmax(300px,1fr));
+gap:25px;
+}
+
+.skill-card{
+border:1px solid #222;
+padding:25px;
+}
+
+.skill-card h3{
+color:#c9a24c;
+margin-top:0;
+}
+
+.skill-tag{
 border:1px solid #333;
-padding:10px 16px;
-margin:8px;
-border-radius:6px;
+padding:6px 12px;
+margin:5px;
+display:inline-block;
+font-size:12px;
+}
+
+/* PROJECTS */
+
+.projects-grid{
+display:grid;
+grid-template-columns:repeat(auto-fit,minmax(400px,1fr));
+gap:30px;
+}
+
+.project-card{
+border:1px solid #222;
+padding:30px;
+transition:.3s;
+}
+
+.project-card:hover{
+border:1px solid #c9a24c;
+transform:translateY(-6px);
+}
+
+.project-tags span{
+border:1px solid #333;
+padding:6px 10px;
+margin:5px;
+font-size:12px;
+display:inline-block;
+color:#c9a24c;
 }
 
 /* EXPERIENCE */
@@ -175,40 +241,20 @@ padding-left:20px;
 }
 
 .timeline-item{
-margin-bottom:35px;
+margin-bottom:40px;
 }
 
-.line{
-margin:6px 0;
-color:#bbb;
-}
+/* CERTIFICATIONS */
 
-/* PROJECTS */
-
-.projects-grid{
+.cert-grid{
 display:grid;
 grid-template-columns:repeat(auto-fit,minmax(300px,1fr));
-gap:30px;
+gap:25px;
 }
 
-.project-card{
+.cert-card{
 border:1px solid #222;
 padding:25px;
-transition:0.3s;
-}
-
-.project-card:hover{
-border:1px solid #c9a24c;
-transform:translateY(-6px);
-}
-
-.badge{
-display:inline-block;
-border:1px solid #333;
-padding:5px 10px;
-margin:5px;
-font-size:12px;
-color:#c9a24c;
 }
 
 /* CONTACT */
@@ -219,13 +265,11 @@ margin-right:20px;
 text-decoration:none;
 }
 
-/* FOOTER */
-
 footer{
 text-align:center;
-padding:30px;
+padding:40px;
 border-top:1px solid #222;
-margin-top:50px;
+margin-top:60px;
 }
 
 </style>
@@ -243,11 +287,14 @@ margin-top:50px;
 <a href="#skills">SKILLS</a>
 <a href="#projects">PROJECTS</a>
 <a href="#experience">EXPERIENCE</a>
+<a href="#certs">CERTS</a>
 <a href="#education">EDUCATION</a>
 <a href="#contact">CONTACT</a>
 </div>
 
 </nav>
+
+<!-- HERO -->
 
 <header class="hero">
 
@@ -260,9 +307,11 @@ Himasree<br>
 Manthina
 </h1>
 
-<p class="hero-tagline">
-Building scalable enterprise systems and microservices using
-Java, Spring Boot, React, and cloud-native architecture.
+<p class="hero-desc">
+
+Building scalable enterprise applications and microservices
+using Java, Spring Boot, React and cloud architecture.
+
 </p>
 
 <div class="hero-buttons">
@@ -273,7 +322,6 @@ Java, Spring Boot, React, and cloud-native architecture.
 </div>
 
 </div>
-
 
 <div class="hero-right">
 
@@ -287,48 +335,75 @@ Java, Spring Boot, React, and cloud-native architecture.
 
 </header>
 
+<!-- ABOUT -->
+
 <section id="about">
 
-<h2>About</h2>
+<div class="section-title">
+<div class="section-number">01</div>
+<h2>About <span>Me</span></h2>
+<div class="divider"></div>
+</div>
 
 <p class="about-text">
 
-Full Stack Developer with 5+ years of experience building
-enterprise applications using Java, Spring Boot, React, Angular,
-and AWS.
+Full Stack Developer with 5+ years of experience building enterprise
+applications using Java, Spring Boot, React and Angular.
 
-Specialized in microservices architecture, REST APIs,
+I specialize in microservices architecture, REST APIs,
 and cloud-native deployments using Docker and Kubernetes.
 
 </p>
 
 </section>
 
+<!-- SKILLS -->
+
 <section id="skills">
 
-<h2>Skills</h2>
+<div class="section-title">
+<div class="section-number">02</div>
+<h2>Skills & <span>Expertise</span></h2>
+<div class="divider"></div>
+</div>
 
-<div class="skills">
+<div class="skills-grid">
 
-<span>Java</span>
-<span>Spring Boot</span>
-<span>React</span>
-<span>Angular</span>
-<span>AWS</span>
-<span>Docker</span>
-<span>Kubernetes</span>
-<span>REST APIs</span>
-<span>Microservices</span>
-<span>MySQL</span>
-<span>MongoDB</span>
+<div class="skill-card">
+<h3>Backend</h3>
+<span class="skill-tag">Java</span>
+<span class="skill-tag">Spring Boot</span>
+<span class="skill-tag">Microservices</span>
+<span class="skill-tag">REST APIs</span>
+</div>
+
+<div class="skill-card">
+<h3>Frontend</h3>
+<span class="skill-tag">React</span>
+<span class="skill-tag">Angular</span>
+<span class="skill-tag">TypeScript</span>
+</div>
+
+<div class="skill-card">
+<h3>Cloud</h3>
+<span class="skill-tag">AWS</span>
+<span class="skill-tag">Docker</span>
+<span class="skill-tag">Kubernetes</span>
+</div>
 
 </div>
 
 </section>
 
+<!-- PROJECTS -->
+
 <section id="projects">
 
-<h2>Projects</h2>
+<div class="section-title">
+<div class="section-number">03</div>
+<h2>Featured <span>Projects</span></h2>
+<div class="divider"></div>
+</div>
 
 <div class="projects-grid">
 
@@ -336,16 +411,18 @@ and cloud-native deployments using Docker and Kubernetes.
 
 <h3>Spring Boot Microservices Platform</h3>
 
-<div class="badge">Spring Boot</div>
-<div class="badge">Docker</div>
-<div class="badge">Kubernetes</div>
-
 <p>
 
-Microservices architecture platform with API gateway,
-containerized services and scalable deployments.
+Microservices architecture with API gateway,
+containerized services and Kubernetes deployment.
 
 </p>
+
+<div class="project-tags">
+<span>Spring Boot</span>
+<span>Docker</span>
+<span>Kubernetes</span>
+</div>
 
 </div>
 
@@ -353,32 +430,18 @@ containerized services and scalable deployments.
 
 <h3>React + Spring Boot Enterprise App</h3>
 
-<div class="badge">React</div>
-<div class="badge">Spring Boot</div>
-<div class="badge">MySQL</div>
-
 <p>
 
-Full stack application with React frontend and Spring Boot backend
-APIs powering enterprise workflows.
+Full stack application with React frontend and
+Spring Boot backend APIs.
 
 </p>
 
+<div class="project-tags">
+<span>React</span>
+<span>Spring Boot</span>
+<span>MySQL</span>
 </div>
-
-<div class="project-card">
-
-<h3>AWS Serverless Event Processing API</h3>
-
-<div class="badge">AWS</div>
-<div class="badge">Lambda</div>
-
-<p>
-
-Event-driven backend system using AWS Lambda,
-API Gateway and serverless architecture.
-
-</p>
 
 </div>
 
@@ -386,9 +449,15 @@ API Gateway and serverless architecture.
 
 </section>
 
+<!-- EXPERIENCE -->
+
 <section id="experience">
 
-<h2>Experience</h2>
+<div class="section-title">
+<div class="section-number">04</div>
+<h2>Work <span>Experience</span></h2>
+<div class="divider"></div>
+</div>
 
 <div class="timeline">
 
@@ -397,10 +466,8 @@ API Gateway and serverless architecture.
 <h3>Full Stack Engineer — Find Me</h3>
 <p>2024 – Present</p>
 
-<div class="line">- Built backend services using Java 17 and Spring Boot</div>
-<div class="line">- Containerized applications using Docker and Kubernetes</div>
-<div class="line">- Migrated modules to Azure Functions with Cosmos DB</div>
-<div class="line">- Implemented CI/CD pipelines using Azure DevOps</div>
+<p>- Built backend services using Java 17 and Spring Boot</p>
+<p>- Containerized applications using Docker and Kubernetes</p>
 
 </div>
 
@@ -409,37 +476,72 @@ API Gateway and serverless architecture.
 <h3>Full Stack Developer — Accenture</h3>
 <p>2022 – 2023</p>
 
-<div class="line">- Developed Spring Boot microservices and REST APIs</div>
-<div class="line">- Built cloud APIs using AWS Lambda and API Gateway</div>
-<div class="line">- Automated infrastructure provisioning using AWS CDK</div>
-<div class="line">- Implemented CI/CD pipelines using Jenkins</div>
+<p>- Developed Spring Boot microservices</p>
+<p>- Implemented CI/CD pipelines using Jenkins</p>
 
 </div>
 
 </div>
 
 </section>
+
+<!-- CERTIFICATIONS -->
+
+<section id="certs">
+
+<div class="section-title">
+<div class="section-number">05</div>
+<h2>Certifications</h2>
+<div class="divider"></div>
+</div>
+
+<div class="cert-grid">
+
+<div class="cert-card">
+<h3>AWS Cloud Practitioner</h3>
+<p>Amazon Web Services</p>
+</div>
+
+<div class="cert-card">
+<h3>Java Spring Boot Certification</h3>
+<p>Professional Training</p>
+</div>
+
+</div>
+
+</section>
+
+<!-- EDUCATION -->
 
 <section id="education">
 
+<div class="section-title">
+<div class="section-number">06</div>
 <h2>Education</h2>
+<div class="divider"></div>
+</div>
 
-<p>Master’s in Computer Science — Avila University</p>
-<p>Bachelor’s Degree — Aditya University</p>
+<p>Master's in Computer Science — Avila University</p>
+<p>Bachelor's Degree — Aditya University</p>
 
 </section>
 
+<!-- CONTACT -->
+
 <section id="contact">
 
-<h2>Contact</h2>
+<div class="section-title">
+<div class="section-number">07</div>
+<h2>Let's <span>Connect</span></h2>
+<div class="divider"></div>
+</div>
 
 <p>Email: manthimasree@gmail.com</p>
-<p>Location: Plano, Texas</p>
 
 <div class="contact-links">
 
-<a href="https://github.com">GitHub</a>
-<a href="https://linkedin.com">LinkedIn</a>
+<a href="#">LinkedIn</a>
+<a href="#">GitHub</a>
 
 </div>
 
@@ -447,7 +549,7 @@ API Gateway and serverless architecture.
 
 <footer>
 
-<p>© 2026 Himasree Manthina</p>
+© 2026 Himasree Manthina
 
 </footer>
 
