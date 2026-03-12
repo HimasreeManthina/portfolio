@@ -89,20 +89,28 @@ margin:auto;
 text-align:center;
 }
 
-/* SKILLS */
+/* SKILL BARS */
 
-.skills span{
-display:inline-block;
-background:#1e293b;
-padding:10px 16px;
-margin:8px;
-border-radius:8px;
-transition:0.3s;
+.skill{
+margin:20px 0;
+text-align:left;
 }
 
-.skills span:hover{
+.skill-name{
+margin-bottom:6px;
+}
+
+.skill-bar{
+background:#1e293b;
+height:8px;
+border-radius:6px;
+overflow:hidden;
+}
+
+.skill-progress{
+height:8px;
 background:#38bdf8;
-color:black;
+width:0;
 }
 
 /* TECH ICONS */
@@ -152,6 +160,17 @@ text-align:left;
 
 .line{
 margin:6px 0;
+}
+
+/* BADGES */
+
+.badge{
+display:inline-block;
+background:#1e293b;
+padding:6px 10px;
+border-radius:6px;
+margin:5px;
+font-size:12px;
 }
 
 /* TIMELINE */
@@ -252,20 +271,43 @@ using Docker and Kubernetes.
 
 <h2>Skills</h2>
 
-<div class="skills">
+<div class="skill">
 
-<span>Java</span>
-<span>Spring Boot</span>
-<span>React</span>
-<span>Angular</span>
-<span>AWS</span>
-<span>Docker</span>
-<span>Kubernetes</span>
-<span>REST APIs</span>
-<span>Microservices</span>
-<span>MySQL</span>
-<span>MongoDB</span>
-<span>Jenkins</span>
+<div class="skill-name">Java</div>
+
+<div class="skill-bar">
+<div class="skill-progress" style="width:90%"></div>
+</div>
+
+</div>
+
+<div class="skill">
+
+<div class="skill-name">Spring Boot</div>
+
+<div class="skill-bar">
+<div class="skill-progress" style="width:85%"></div>
+</div>
+
+</div>
+
+<div class="skill">
+
+<div class="skill-name">React</div>
+
+<div class="skill-bar">
+<div class="skill-progress" style="width:80%"></div>
+</div>
+
+</div>
+
+<div class="skill">
+
+<div class="skill-name">AWS</div>
+
+<div class="skill-bar">
+<div class="skill-progress" style="width:80%"></div>
+</div>
 
 </div>
 
@@ -337,6 +379,10 @@ using Docker and Kubernetes.
 
 <h3>Spring Boot Microservices Platform</h3>
 
+<div class="badge">Spring Boot</div>
+<div class="badge">Docker</div>
+<div class="badge">Kubernetes</div>
+
 <div class="line">- API Gateway routing</div>
 <div class="line">- Spring Boot microservices</div>
 <div class="line">- Docker containerization</div>
@@ -358,6 +404,10 @@ View Code →
 
 <h3>React + Spring Boot Enterprise App</h3>
 
+<div class="badge">React</div>
+<div class="badge">Spring Boot</div>
+<div class="badge">MySQL</div>
+
 <div class="line">- React frontend</div>
 <div class="line">- Spring Boot APIs</div>
 <div class="line">- MySQL database</div>
@@ -377,6 +427,9 @@ View Code →
 <div class="project-content">
 
 <h3>AWS Serverless Event Processing API</h3>
+
+<div class="badge">AWS Lambda</div>
+<div class="badge">API Gateway</div>
 
 <div class="line">- AWS Lambda</div>
 <div class="line">- API Gateway</div>
